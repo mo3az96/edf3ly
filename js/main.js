@@ -21,6 +21,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Fixed Header
+  const header = document.getElementById("header"),
+    stickyOffset = header.offsetTop,
+    toggleFixed = () =>
+      header.classList.toggle("fixed", window.scrollY > stickyOffset);
+
+  toggleFixed();
+  window.addEventListener("scroll", toggleFixed);
+  // Password toggle
   document.querySelectorAll(".toggle-password").forEach((button) => {
     button.addEventListener("click", function () {
       const input = this.previousElementSibling;
