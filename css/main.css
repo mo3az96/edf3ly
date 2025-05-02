@@ -837,6 +837,11 @@ html[dir=ltr] .form-control {
   width: 100%;
   transition: all 0.3s ease-in-out;
 }
+@media (max-width: 991px) {
+  .page-header:has(.search-form) {
+    grid-template-columns: 1fr;
+  }
+}
 @media (max-width: 767px) {
   .page-header {
     grid-template-columns: 1fr;
@@ -861,6 +866,11 @@ html[dir=ltr] .form-control {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+}
+@media (max-width: 480px) {
+  .page-tools {
+    flex-direction: column;
+  }
 }
 
 .home-cards {
@@ -1340,6 +1350,46 @@ html[dir=ltr] .dt-container .bottom .dt-length select {
 }
 .dt-container .bottom .dt-paging nav button.dt-paging-button.disabled {
   display: none;
+}
+
+.search-form {
+  position: relative;
+  width: 43%;
+  max-width: 429px;
+}
+@media (max-width: 767px) {
+  .search-form {
+    width: 39%;
+  }
+}
+@media (max-width: 480px) {
+  .search-form {
+    width: 100%;
+  }
+}
+.search-form .form-control {
+  background-color: var(--bg2);
+}
+.search-form .search-btn {
+  position: absolute;
+  top: 50%;
+  inset-inline-end: 15px;
+  transform: translateY(-50%);
+  width: 24px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--textColor);
+  fill: var(--textColor);
+  stroke: var(--textColor);
+  padding: 0;
+  transition: all 0.3s ease-in-out;
+}
+.search-form .search-btn:hover {
+  color: #ae5be9;
+  fill: #ae5be9;
+  stroke: #ae5be9;
 }
 
 body {
