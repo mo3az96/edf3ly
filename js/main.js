@@ -60,7 +60,7 @@ $(document).ready(function () {
   if ($(".data-table").length) {
     $(".data-table").DataTable({
       dom: '<"table-responsive"rt><"bottom"lpi><"clear">',
-      pageLength: 1,
+      // pageLength: 1,
       responsive: true,
       pagingType: "simple_numbers",
       language: {
