@@ -6,11 +6,11 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
     />
-    <title>إدفعلى | Login</title>
+    <title>إدفعلى | Home</title>
     <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="css/tabulator.min.css" />
-    <link rel="stylesheet" href="css/tom-select.min.css" />
+    <link rel="stylesheet" href="css/datatables.min.css" />
+    <link rel="stylesheet" href="css/select2.min.css" />
     <link rel="stylesheet" href="css/fontawesome.min.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
@@ -20,7 +20,8 @@
       <div class="container">
         <div class="header">
           <a href="home.html" class="logo">
-            <img src="images/logo.png" class="img-contain" />
+            <img src="images/logo.png" class="img-contain light" />
+            <img src="images/logo_second.png" class="img-contain dark" />
           </a>
           <div class="mode-switcher">
             <label class="switch" for="modeSwitch">
@@ -204,7 +205,7 @@
             </ul>
           </div>
         </div>
-        <div class="wrapper-item page-content">
+        <div class="wrapper-item">
           <div class="home-cards">
             <div class="total-card">
               <img src="images/bg/card.svg" class="card-bg img-cover" />
@@ -263,13 +264,139 @@
               </div>
             </div>
           </div>
-          <div class="page-overflow"></div>
+          <div class="page-content">
+            <div class="content-header">
+              <h1 class="content-title">أحدث المعاملات</h1>
+              <div class="content-filters">
+                <label class="filter-label">اختر تاريخ</label>
+                <div class="date-filters">
+                  <div class="date-filter">
+                    <label class="date-label">من</label>
+                    <div class="date-content" data-placeholder="اختر التاريخ">
+                      <span class="calendar-icon">
+                        <img src="images/icons/calendar.svg" class="svg" />
+                      </span>
+                      <input type="date" class="form-control" id="date_from" />
+                    </div>
+                  </div>
+
+                  <div class="date-filter">
+                    <label class="date-label">الي</label>
+                    <div class="date-content" data-placeholder="اختر التاريخ">
+                      <span class="calendar-icon">
+                        <img src="images/icons/calendar.svg" class="svg" />
+                      </span>
+                      <input type="date" class="form-control" id="date_to" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="home-table">
+              <table class="table data-table table-striped table-fixed">
+                <thead>
+                  <tr>
+                    <th>المعرف</th>
+                    <th>نوع المعاملة</th>
+                    <th>التاريخ</th>
+                    <th>السعر</th>
+                    <th>حالة المعاملة</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="table-value id-value"> #1254 </span></td>
+                    <td><span class="table-value"> شراء </span></td>
+                    <td>
+                      <span class="table-value date-value">
+                        <i>
+                          <img src="images/icons/calendar.svg" class="svg" />
+                        </i>
+                        2025/04/19
+                      </span>
+                    </td>
+                    <td><span class="table-value"> $ 35 </span></td>
+                    <td>
+                      <span class="status-label pending"> معلق </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="table-value id-value"> #765 </span></td>
+                    <td><span class="table-value"> بيع </span></td>
+                    <td>
+                      <span class="table-value date-value">
+                        <i>
+                          <img src="images/icons/calendar.svg" class="svg" />
+                        </i>
+                        2025/04/19
+                      </span>
+                    </td>
+                    <td><span class="table-value"> $ 25 </span></td>
+                    <td>
+                      <span class="status-label completed"> مكتمل </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="table-value id-value"> #145 </span></td>
+                    <td><span class="table-value"> سحب </span></td>
+                    <td>
+                      <span class="table-value date-value">
+                        <i>
+                          <img src="images/icons/calendar.svg" class="svg" />
+                        </i>
+                        2025/04/19
+                      </span>
+                    </td>
+                    <td><span class="table-value"> $ 87 </span></td>
+                    <td>
+                      <span class="status-label canceled"> ملغي </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="table-value id-value"> #765 </span></td>
+                    <td><span class="table-value"> ارسال </span></td>
+                    <td>
+                      <span class="table-value date-value">
+                        <i>
+                          <img src="images/icons/calendar.svg" class="svg" />
+                        </i>
+                        2025/04/19
+                      </span>
+                    </td>
+                    <td><span class="table-value"> $ 12 </span></td>
+                    <td>
+                      <span class="status-label inProgress">
+                        جاري التنفيذ
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="table-value id-value"> #987 </span></td>
+                    <td><span class="table-value"> ايداع </span></td>
+                    <td>
+                      <span class="table-value date-value">
+                        <i>
+                          <img src="images/icons/calendar.svg" class="svg" />
+                        </i>
+                        2025/04/19
+                      </span>
+                    </td>
+                    <td><span class="table-value"> $ 54 </span></td>
+                    <td>
+                      <span class="status-label failed"> فشل</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    <script src="js/jquery.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/tabulator.min.js"></script>
-    <script src="js/tom-select.complete.min.js"></script>
+    <script src="js/datatables.min.js"></script>
+    <script src="js/select2.full.min.js"></script>
     <script src="js/svg.js"></script>
     <script src="js/main.js"></script>
   </body>

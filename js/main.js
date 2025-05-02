@@ -1,46 +1,99 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const modeToggle = document.getElementById("modeSwitch");
+$(document).ready(function () {
+  // Dark mode toggle
+  const modeToggle = $("#modeSwitch");
   const savedMode = localStorage.getItem("mode");
 
-  // Apply saved mode
   if (savedMode === "dark") {
-    document.body.classList.add("dark");
-    modeToggle.checked = true;
+    $("body").addClass("dark");
+    modeToggle.prop("checked", true);
   }
 
-  // Toggle mode on change
-  modeToggle.addEventListener("change", () => {
-    if (modeToggle.checked) {
-      document.body.classList.add("dark");
+  modeToggle.on("change", function () {
+    if ($(this).is(":checked")) {
+      $("body").addClass("dark");
       localStorage.setItem("mode", "dark");
     } else {
-      document.body.classList.remove("dark");
+      $("body").removeClass("dark");
       localStorage.setItem("mode", "light");
     }
   });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
   // Fixed Header
-  const header = document.getElementById("header"),
-    stickyOffset = header.offsetTop,
-    toggleFixed = () =>
-      header.classList.toggle("fixed", window.scrollY > stickyOffset);
-
-  toggleFixed();
-  window.addEventListener("scroll", toggleFixed);
-  // Password toggle
-  document.querySelectorAll(".toggle-password").forEach((button) => {
-    button.addEventListener("click", function () {
-      const input = this.previousElementSibling;
-
-      if (input.type === "password") {
-        input.type = "text";
-        this.classList.add("active");
+  const header = $("#header");
+  if (header.length) {
+    const stickyOffset = header.offset().top;
+    const toggleFixed = function () {
+      if ($(window).scrollTop() > stickyOffset) {
+        header.addClass("fixed");
       } else {
-        input.type = "password";
-        this.classList.remove("active");
+        header.removeClass("fixed");
       }
-    });
+    };
+
+    toggleFixed();
+    $(window).on("scroll", toggleFixed);
+  }
+
+  // Password toggle
+  $(".toggle-password").on("click", function () {
+    const input = $(this).prev("input");
+    if (input.attr("type") === "password") {
+      input.attr("type", "text");
+      $(this).addClass("active");
+    } else {
+      input.attr("type", "password");
+      $(this).removeClass("active");
+    }
   });
+
+  // Date Picker active class
+  $('.date-content input[type="date"]').on("change", function () {
+    const container = $(this).closest(".date-content");
+    if ($(this).val()) {
+      container.addClass("active");
+    } else {
+      container.removeClass("active");
+    }
+  });
+
+  // DataTable initialization
+  if ($(".data-table").length) {
+    $(".data-table").DataTable({
+      dom: '<"table-responsive"rt><"bottom"lpi><"clear">',
+      pageLength: 1,
+      responsive: true,
+      pagingType: "simple_numbers",
+      language: {
+        url: document.dir === "rtl" ? "./js/ar.json" : "",
+        lengthMenu:
+          document.dir === "rtl"
+            ? "<label>نتائج فى كل صفحة</label> _MENU_"
+            : "<label>Results per page</label> _MENU_",
+
+        info:
+          document.dir === "rtl"
+            ? "عرض _START_ إلى _END_ من _TOTAL_ نتيجه"
+            : "Showing _START_ to _END_ of (_TOTAL_)",
+
+        paginate: {
+          previous:
+            document.dir === "rtl"
+              ? '<i class="far fa-chevron-right"></i>'
+              : '<i class="far fa-chevron-left"></i>',
+          next:
+            document.dir === "rtl"
+              ? '<i class="far fa-chevron-left"></i>'
+              : '<i class="far fa-chevron-right"></i>',
+          first:
+            document.dir === "rtl"
+              ? '<i class="far fa-chevron-double-right"></i>'
+              : '<i class="far fa-chevron-double-left"></i>',
+          last:
+            document.dir === "rtl"
+              ? '<i class="far fa-chevron-double-left"></i>'
+              : '<i class="far fa-chevron-double-right"></i>',
+        },
+      },
+    });
+  }
 });
