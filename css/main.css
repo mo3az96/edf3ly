@@ -17,7 +17,7 @@
   --textColor: #fff9ea;
   --bg1: #1c1f26;
   --bg2: #2b2f39;
-  --border: #24272e;
+  --border: #31343B;
 }
 
 /* General Resets */
@@ -438,7 +438,7 @@ html[dir=ltr] .form-control {
   padding-inline-start: 40px;
   font-size: 14px;
   font-weight: 400;
-  color: var(--secondaryTextColor);
+  color: #626c83;
   position: relative;
   z-index: 1;
 }
@@ -451,7 +451,7 @@ html[dir=ltr] .form-control {
   justify-content: center;
   top: 8px;
   inset-inline-start: 10px;
-  fill: var(--secondaryTextColor);
+  fill: #626c83;
   pointer-events: none;
   z-index: 3;
 }
@@ -486,7 +486,7 @@ html[dir=ltr] .form-control {
   pointer-events: none;
   font-size: 14px;
   font-weight: 400;
-  color: var(--secondaryTextColor);
+  color: #626c83;
   border-radius: 12px;
 }
 .dark .date-content::before {
@@ -734,6 +734,11 @@ html[dir=ltr] .form-control {
     display: none;
   }
 }
+.dark .filter-label {
+  background: linear-gradient(192.04deg, #e2e3ff 50.5%, #eadeff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .date-filters {
   display: flex;
@@ -812,14 +817,26 @@ html[dir=ltr] .form-control {
   }
 }
 
+.dark .table-striped thead tr {
+  background-color: #24272e;
+}
 .table-striped tbody tr:nth-child(odd) {
   background-color: var(--bg1);
+}
+.dark .table-striped tbody tr:nth-child(odd) {
+  background-color: #2b2f39;
 }
 .table-striped tbody tr:nth-child(even) {
   background-color: var(--bg2);
 }
+.dark .table-striped tbody tr:nth-child(even) {
+  background-color: #24272e;
+}
 .table-striped tbody > tr > td {
   border-top: 1px solid var(--border);
+}
+.dark .table-striped tbody > tr > td {
+  border-top-color: #31343b;
 }
 .table-striped tr > * {
   border-bottom: none !important;
@@ -859,6 +876,9 @@ html[dir=ltr] .form-control {
   font-size: 24px;
   font-weight: 600;
   font-style: unset;
+}
+.dark .user-name {
+  color: #ccd2e0;
 }
 
 .page-tools {
@@ -1035,6 +1055,9 @@ html[dir=ltr] .total-card .card-bg {
   padding: 20px;
   white-space: nowrap;
 }
+.dark .currency-card {
+  color: #E2E6EE;
+}
 @media (max-width: 767px) {
   .currency-card {
     padding: 10px 15px;
@@ -1191,9 +1214,15 @@ table.data-table .table-value i {
     display: none;
   }
 }
+.dark table.data-table .table-value {
+  color: #96a0b6;
+}
 table.data-table .id-value {
   font-weight: 500;
   color: var(--textColor);
+}
+.dark table.data-table .id-value {
+  color: #96a0b6;
 }
 table.data-table .status-label {
   display: flex;
@@ -1213,6 +1242,10 @@ table.data-table .status-label {
 table.data-table .status-label.pending {
   background-color: #f0f3fa;
   color: #96a0b6;
+}
+.dark table.data-table .status-label.pending {
+  background-color: #a7acb8;
+  color: #40444c;
 }
 table.data-table .status-label.completed {
   background-color: #ecfaf2;
@@ -1236,7 +1269,11 @@ table.data-table .status-label.failed {
   align-items: center;
   justify-content: space-between;
   padding: 24px;
-  background-color: var(--bg2);
+  background-color: transparent;
+  border-top: 1px solid var(--border);
+}
+.dark .dt-container .bottom {
+  border-top-color: #31343b;
 }
 @media (max-width: 991px) {
   .dt-container .bottom {
@@ -1261,6 +1298,9 @@ table.data-table .status-label.failed {
   font-weight: 500;
   line-height: 1.5;
   color: var(--secondaryTextColor);
+}
+.dark .dt-container .bottom .dt-length label {
+  color: #626c83;
 }
 .dt-container .bottom .dt-length select {
   border: none;
@@ -1290,11 +1330,17 @@ html[dir=ltr] .dt-container .bottom .dt-length select {
     justify-content: center;
   }
 }
+.dark .dt-container .bottom .dt-length {
+  color: #626c83;
+}
 .dt-container .bottom .dt-info {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
   color: var(--secondaryTextColor);
+}
+.dark .dt-container .bottom .dt-info {
+  color: #626c83;
 }
 @media (max-width: 991px) {
   .dt-container .bottom .dt-info {
@@ -1418,12 +1464,18 @@ header {
   left: 0;
   width: 100%;
   z-index: 9999;
+  border-bottom: 1px solid transparent;
 }
 .login-page header {
   background-color: transparent;
 }
 header.fixed {
   box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.0509803922);
+  border-bottom-color: #f1f3f9;
+}
+.dark header.fixed {
+  background-color: rgba(43, 47, 57, 0.97);
+  border-bottom-color: rgba(241, 243, 249, 0.25);
 }
 
 .header {
@@ -1706,6 +1758,10 @@ html[dir=ltr] .header_icon-content {
   overflow: hidden;
   max-width: 100%;
   margin-top: 20px;
+}
+.dark .page-content {
+  border-color: #24272E;
+  background-color: var(--bg1);
 }
 
 .side-nav {

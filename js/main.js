@@ -21,7 +21,7 @@ $(document).ready(function () {
   // Fixed Header
   const header = $("#header");
   if (header.length) {
-    const stickyOffset = header.offset().top;
+    const stickyOffset = 50;
     const toggleFixed = function () {
       if ($(window).scrollTop() > stickyOffset) {
         header.addClass("fixed");
