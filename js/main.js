@@ -1,3 +1,10 @@
+$(window).on("load", function () {
+  setTimeout(() => {
+    $(".loading").removeClass("loading");
+    $("body").removeClass("overflow");
+  }, 500);
+});
+
 $(document).ready(function () {
   // Dark mode toggle
   const modeToggle = $("#modeSwitch");
@@ -96,4 +103,31 @@ $(document).ready(function () {
       },
     });
   }
+
+  // Slider
+  var storeSwiper = new Swiper(".products-slider .swiper", {
+    loop: true,
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+        spaceBetween: 5,
+      },
+      992: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1199: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+    },
+    navigation: {
+      nextEl: ".products-slider .swiper-btn-next",
+      prevEl: ".products-slider .swiper-btn-prev",
+    },
+    pagination: {
+      el: ".products-slider .swiper-pagination",
+      clickable: true,
+    },
+  });
 });
