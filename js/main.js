@@ -130,4 +130,29 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+
+  // Select2
+  function formatState(state) {
+    if (!state.id) {
+      return state.text;
+    }
+
+    const flagUrl = state.element?.dataset?.flag?.toLowerCase();
+
+    const $state = $(`
+      <span class="state-img">
+        <img src="${flagUrl}" class="img-contain" />
+      </span>
+      <span class="state-text">${state.text}</span>
+  `);
+
+    return $state;
+  }
+
+  $(".currency-select").select2({
+    templateResult: formatState,
+    templateSelection: formatState,
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: "currencies-list",
+  });
 });
