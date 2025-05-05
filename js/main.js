@@ -131,7 +131,7 @@ $(document).ready(function () {
     },
   });
 
-  // Select2
+  // Select2 Currencies
   function formatState(state) {
     if (!state.id) {
       return state.text;
@@ -154,5 +154,52 @@ $(document).ready(function () {
     templateSelection: formatState,
     minimumResultsForSearch: Infinity,
     dropdownCssClass: "currencies-list",
+  });
+
+  // Select2 Payment
+  function formatPayment(payment) {
+    if (!payment.id) {
+      return payment.text;
+    }
+
+    const flagUrl = payment.element?.dataset?.flag?.toLowerCase();
+    const note = payment.element?.dataset?.note;
+
+    const $payment = $(`
+    <div class="payment-content">
+      <span class="payment-img">
+        <img src="${flagUrl}" class="img-contain" />
+      </span>
+      <div class="payment-text">
+        <span class="payment-title">${payment.text}</span>
+        <span class="payment-note">${note}</span>
+      </div>
+    </div>
+  `);
+
+    return $payment;
+  }
+  function formatPaymentList(payment) {
+    if (!payment.id) {
+      return payment.text;
+    }
+
+    const flagUrl = payment.element?.dataset?.flag?.toLowerCase();
+
+    const $payment = $(`
+      <span class="payment-img">
+        <img src="${flagUrl}" class="img-contain" />
+      </span>
+      <span class="payment-text">${payment.text}</span>
+  `);
+
+    return $payment;
+  }
+
+  $(".payment-select .form-control").select2({
+    templateResult: formatPaymentList,
+    templateSelection: formatPayment,
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: "payment-list",
   });
 });
