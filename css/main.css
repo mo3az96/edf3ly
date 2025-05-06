@@ -2822,6 +2822,95 @@ html[dir=ltr] .payment-select .select2-container .select2-selection--single .sel
   padding: 5px;
 }
 
+.radios-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 10px;
+}
+@media (max-width: 1199px) {
+  .radios-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+.radio-item {
+  width: 100%;
+}
+.radio-item .payment-content {
+  width: 100%;
+  border: 1px solid #e2e6ee;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 12px;
+  padding: 10px;
+  min-height: 70px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.dark .radio-item .payment-content {
+  border-color: #31343b;
+  background-color: var(--bg1);
+}
+.radio-item .payment-img {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #e2e6ee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+}
+.radio-item .payment-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.radio-item .payment-title {
+  color: var(--secondaryTitle);
+  font-size: 14px;
+}
+.radio-item .payment-note {
+  color: var(--secondaryTextColor);
+  font-size: 12px;
+}
+.radio-item .checkmark {
+  margin-inline-start: auto;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid #e2e6ee;
+  font-size: 10px;
+}
+.radio-item .checkmark i {
+  color: #fff;
+  transform: scale(0) rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+.radio-item input {
+  display: none;
+}
+.radio-item input:checked + .payment-content {
+  background-color: rgba(174, 91, 233, 0.1);
+  border-color: #ae5be9;
+}
+.radio-item input:checked + .payment-content .checkmark {
+  border-color: #ae5be9;
+  background-color: #ae5be9;
+}
+.radio-item input:checked + .payment-content .checkmark i {
+  transform: scale(1) rotate(0deg);
+}
+
 .loading {
   position: relative;
   overflow: hidden;

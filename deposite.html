@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no"
     />
-    <title>إدفعلى | Send</title>
+    <title>إدفعلى | Deposit</title>
     <link rel="shortcut icon" type="img/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/datatables.min.css" />
@@ -157,7 +157,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="send.html" class="nav-link active">
+                <a href="send.html" class="nav-link">
                   <span class="icon">
                     <img src="images/nav/send.svg" class="svg img-contain" />
                   </span>
@@ -165,7 +165,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="deposit.html" class="nav-link">
+                <a href="deposit.html" class="nav-link active">
                   <span class="icon">
                     <img src="images/nav/deposit.svg" class="svg img-contain" />
                   </span>
@@ -207,7 +207,7 @@
         </div>
         <div class="wrapper-item loading">
           <div class="form-page">
-            <h1 class="form-title">ارسال الأموال</h1>
+            <h1 class="form-title">ايداع الأموال</h1>
             <div class="form-content">
               <form class="money-form">
                 <div class="form-group">
@@ -243,49 +243,73 @@
                   </div>
                   <!-- <span class="error">هنا خطأ</span> -->
                 </div>
-                <div class="form-grid">
-                  <div class="form-group payment-select">
-                    <label class="form-label">اختيار النظام</label>
-                    <select class="form-control">
-                      <option
-                        value="visa/master"
-                        data-flag="images/payment/1.png"
-                        data-note="رسوم ٢٪"
-                      >
-                        Visa / MasterCard
-                      </option>
-                      <option
-                        value="paypal"
-                        data-flag="images/payment/2.png"
-                        data-note="رسوم ٢٪"
-                        selected
-                      >
-                        Paypal
-                      </option>
-                      <option
-                        value="apple"
-                        data-flag="images/payment/3.png"
-                        data-note="رسوم ٢٪"
-                      >
-                        Apple Pay
-                      </option>
-                      <option
-                        value="googl"
-                        data-flag="images/payment/4.png"
-                        data-note="رسوم ٢٪"
-                      >
-                        Google Pay
-                      </option>
-                    </select>
+                <div class="form-group">
+                  <label class="form-label">
+                    اختر طريقة الايداع التي تناسبك
+                  </label>
+                  <div class="radios-grid">
+                    <label class="radio-item">
+                      <input type="radio" name="payment" checked/>
+                      <div class="payment-content">
+                        <div class="payment-img">
+                          <img src="images/payment/1.png" class="img-contain" />
+                        </div>
+                        <div class="payment-text">
+                          <span class="payment-title">Visa / MasterCard</span>
+                          <span class="payment-note">رسوم ٢٪</span>
+                        </div>
+                        <span class="checkmark">
+                          <i class="fal fa-check"></i>
+                        </span>
+                      </div>
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="payment" />
+                      <div class="payment-content">
+                        <div class="payment-img">
+                          <img src="images/payment/2.png" class="img-contain" />
+                        </div>
+                        <div class="payment-text">
+                          <span class="payment-title">Paypal</span>
+                          <span class="payment-note">رسوم ٢٪</span>
+                        </div>
+                        <span class="checkmark">
+                          <i class="fal fa-check"></i>
+                        </span>
+                      </div>
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="payment" />
+                      <div class="payment-content">
+                        <div class="payment-img">
+                          <img src="images/payment/3.png" class="img-contain" />
+                        </div>
+                        <div class="payment-text">
+                          <span class="payment-title">Apple Pay</span>
+                          <span class="payment-note">رسوم ٢٪</span>
+                        </div>
+                        <span class="checkmark">
+                          <i class="fal fa-check"></i>
+                        </span>
+                      </div>
+                    </label>
+                    <label class="radio-item">
+                      <input type="radio" name="payment" />
+                      <div class="payment-content">
+                        <div class="payment-img">
+                          <img src="images/payment/4.png" class="img-contain" />
+                        </div>
+                        <div class="payment-text">
+                          <span class="payment-title">Google Pay</span>
+                          <span class="payment-note">رسوم ٢٪</span>
+                        </div>
+                        <span class="checkmark">
+                          <i class="fal fa-check"></i>
+                        </span>
+                      </div>
+                    </label>
                   </div>
-                  <div class="form-group">
-                    <label class="form-label">الحساب</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="بريد النظام"
-                    />
-                  </div>
+                  <!-- <span class="error">هنا خطأ</span> -->
                 </div>
                 <p class="form_calc-container form_label-container">
                   <label class="form-label">رسومنا</label>
@@ -303,32 +327,26 @@
                     <i class="far fa-equals"></i>
                   </label>
                 </p>
-                <div class="form-group">
-                  <label class="form-label">ملاحظة</label>
-                  <textarea
-                    class="form-control"
-                    placeholder="ملاحظة"
-                  ></textarea>
-                </div>
-                <button type="submit" class="form-submit">ارسال</button>
+
+                <button type="submit" class="form-submit">ايداع</button>
               </form>
               <div class="form-notes">
                 <h2 class="notes-title">ملاحظات وتعليمات</h2>
                 <div class="note-item">
-                  <span class="title">التحويل إلى PayPal:</span>
-                  <span class="value"> تكلفة التحويل 0.5 دولار. </span>
+                  <span class="title">الايداع إلى المحفظة:</span>
+                  <span class="value">عمولة الايداع 0.5 دولار. </span>
                 </div>
                 <div class="note-item">
-                  <span class="title">أقل مبلغ للإرسال:</span>
+                  <span class="title">أقل مبلغ للايداع:</span>
                   <span class="value"> 5 دولارات. </span>
                 </div>
                 <div class="note-item">
-                  <span class="title">أقصى مبلغ للإرسال:</span>
+                  <span class="title">أقصى مبلغ للايداع:</span>
                   <span class="value"> 1000 دولارات. </span>
                 </div>
                 <div class="note-item">
                   <span class="title">ملاحظة:</span>
-                  <span class="value"> وقت التحويل المقدّر "٣ أيام" </span>
+                  <span class="value"> وقت الايداع المقدّر "٣ أيام" </span>
                 </div>
               </div>
             </div>
