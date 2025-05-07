@@ -1,0 +1,45 @@
+.page-header {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  gap: 20px;
+  align-items: center;
+  height: fit-content;
+  min-height: 47px;
+  margin-bottom: 23px;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+  &:has(.search-form) {
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+  @include xs {
+    grid-template-columns: 1fr;
+  }
+}
+
+.user-name {
+  font-size: 20px;
+  color: $textColor;
+  font-weight: 600;
+  margin: 0;
+  i {
+    font-family: $secondaryFont;
+    font-size: 24px;
+    font-weight: 600;
+    font-style: unset;
+  }
+  .dark & {
+    color: #ccd2e0;
+  }
+}
+
+.page-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  @include xxs {
+    flex-direction: column;
+  }
+}

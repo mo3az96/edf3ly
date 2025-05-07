@@ -1,0 +1,54 @@
+.page-btns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-start: auto;
+  gap: 15px;
+  @include xs {
+    margin: 0 auto;
+    gap: 10px;
+  }
+}
+
+.page-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 40px;
+  border-radius: 8px;
+  width: fit-content;
+  min-width: 100px;
+  padding: 0 15px;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+  &.send {
+    background-color: #fff;
+    color: $secondaryColor;
+    &:focus {
+      color: $secondaryColor;
+    }
+  }
+  &.withdraw {
+    background-color: $secondaryBg;
+    color: #fff;
+    fill: #fff;
+    &:focus {
+      color: #fff;
+    }
+    svg {
+      transform: scale(-1);
+    }
+  }
+  &:hover {
+    color: #fff;
+    background-color: $primaryColor;
+  }
+  &.deposite {
+    @include mainBtn;
+    &:after {
+      background-color: $primaryColor;
+    }
+  }
+}

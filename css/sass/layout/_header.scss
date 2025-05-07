@@ -1,0 +1,169 @@
+body {
+  --header: 100px;
+  --fixed-header: var(--header);
+  --side-height: var(--header);
+  &:has(.fixed) {
+    --fixed-header: 70px;
+    --side-height: -5px;
+  }
+  @include xs {
+    --header: 62px;
+    &:has(.fixed) {
+      --fixed-header: 45px;
+      --side-height: -25px;
+    }
+  }
+}
+header {
+  background-color: $bg2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  border-bottom: 1px solid transparent;
+  .login-page & {
+    background-color: transparent;
+  }
+  &.fixed {
+    box-shadow: 0 2px 4px rgba(16, 24, 40, 0.1);
+    border-bottom-color: #f1f3f9;
+    .dark & {
+      box-shadow: 0 2px 4px rgba(#f1f3f9, 0.1);
+      border-bottom-color: rgba(#f1f3f9, 0.1);
+    }
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 15px 0 16px;
+  transition: all 0.3s ease-in-out;
+  @include lg {
+    gap: 135px;
+    .login-page & {
+      padding: 30px 0 0;
+    }
+  }
+  @include xs {
+    padding: 10px 0;
+    gap: 15px;
+  }
+  .fixed & {
+    padding: 10px 0;
+    @include xs {
+      padding: 5px 0;
+      gap: 10px;
+    }
+  }
+}
+
+.logo {
+  width: 169px;
+  aspect-ratio: 169/69;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  @include xs {
+    width: 120px;
+  }
+  .fixed & {
+    width: 120px;
+    @include xs {
+      width: 85px;
+    }
+  }
+  .dark {
+    display: none;
+  }
+  .light {
+    display: block;
+  }
+  .dark & {
+    .light {
+      display: none;
+    }
+    .dark {
+      display: block;
+    }
+  }
+}
+
+.header-tools {
+  margin-inline-start: auto;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  @include xs {
+    gap: 15px;
+  }
+}
+
+.lang-link {
+  font-size: 14px;
+  color: $secondaryTitle;
+  line-height: 1.2;
+  text-transform: uppercase;
+  &:focus {
+    color: $secondaryTitle;
+  }
+  &:hover {
+    color: $primaryColor;
+  }
+}
+.header_icon-content {
+  display: flex;
+  align-items: end;
+  width: 26px;
+  height: 26px;
+  position: relative;
+  @include rtl {
+    justify-content: end;
+  }
+  @include ltr {
+    justify-content: start;
+  }
+  @include xs {
+    width: 25px;
+    height: 25px;
+  }
+}
+.header-icon {
+  fill: $secondaryTextColor;
+  stroke: $secondaryTextColor;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    fill: $primaryColor;
+    stroke: $primaryColor;
+  }
+  .badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #fff;
+    background-color: #eb5757;
+  }
+}
+
+.user-icon {
+  width: 40px;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  overflow: hidden;
+  @include xs {
+    width: 30px;
+  }
+}

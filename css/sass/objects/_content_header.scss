@@ -1,0 +1,146 @@
+.content-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  margin: 0 0;
+  .dark & {
+    background-color: $bg1;
+  }
+  @include md {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.content-title {
+  color: $textColor;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0;
+  @include md {
+    text-align: center;
+  }
+  @include xs {
+    font-size: 18px;
+  }
+}
+
+.content-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  @include xs {
+    width: 100%;
+  }
+}
+
+.filter-label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: $secondaryTitle;
+  @include xs {
+    display: none;
+  }
+  .dark & {
+    background: linear-gradient(192.04deg, #e2e3ff 50.5%, #eadeff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.date-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  @include xs {
+    width: 100%;
+  }
+  @include xxs {
+    flex-direction: column;
+    flex: 1;
+  }
+}
+.date-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  @include xxs {
+    width: 100%;
+  }
+  .form-control {
+    width: 165px;
+    height: 41px;
+    @include xxs {
+      width: 100%;
+    }
+  }
+}
+.date-label {
+  font-size: 14px;
+  line-height: 1.5;
+  color: $tertiaryColor;
+  @include xxs {
+    width: 35px;
+  }
+}
+
+.content-btns {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 8px;
+}
+
+.content-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: $primaryGradient;
+  padding: 0 15px;
+  border-radius: 8px;
+  height: 40px;
+  font-size: 14px;
+  line-height: 1.2;
+  color: $secondaryTitle;
+  transform: perspective(1px);
+  transition: all 0.3s ease-in-out;
+  i {
+    width: 21px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $primaryColor;
+    transition: all 0.3s ease-in-out;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 1px;
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+    .dark & {
+      background-color: $bg1;
+    }
+  }
+
+  &:focus {
+    color: $secondaryTitle;
+  }
+  &:hover {
+    color: #fff;
+    i {
+      color: #fff;
+    }
+    &::after {
+      opacity: 0;
+    }
+  }
+}

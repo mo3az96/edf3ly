@@ -1,0 +1,121 @@
+.side-nav {
+  position: sticky;
+  height: fit-content;
+  top: calc(var(--fixed-header) + 25px);
+  @include xs {
+    top: calc(var(--fixed-header) + 15px);
+  }
+}
+
+.nav_list-content {
+  height: fit-content;
+  max-height: calc(100vh - (var(--side-height) + 130px));
+  overflow-y: auto;
+  box-shadow: 0px 1px 2px 0px $boxshadow;
+  background-color: $bg2;
+  padding: 20px;
+  border-radius: 20px;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+  @include sm {
+    padding: 10px;
+    width: 65px;
+    border-radius: 35px;
+  }
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  @include sm {
+    gap: 10px;
+  }
+  .nav-item {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    &:after {
+      position: absolute;
+      inset-inline: 0;
+      height: 45px;
+      width: 100%;
+      background: $primaryGradient;
+      border-radius: 8px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &:has(.active) {
+      &:after {
+        content: "";
+      }
+      &:first-of-type {
+        margin-top: 8px;
+      }
+    }
+    @include sm {
+      padding: 0;
+      &::after {
+        display: none;
+      }
+      &:has(.active) {
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: fit-content;
+    gap: 10px;
+    font-size: 14px;
+    color: $secondaryNav;
+    fill: $secondaryNav;
+    stroke: $secondaryNav;
+    position: relative;
+    z-index: 2;
+    .icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &:focus {
+      color: $secondaryNav;
+    }
+    &:hover {
+      color: $primaryColor;
+      fill: $primaryColor;
+      stroke: $primaryColor;
+    }
+    &.active {
+      color: #fff;
+      fill: #fff;
+      stroke: #fff;
+    }
+    &.logout {
+      color: #ff3b30;
+      fill: #ff3b30;
+      stroke: #ff3b30;
+    }
+    @include sm {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.active {
+        background: $primaryGradient;
+      }
+      .text {
+        display: none;
+      }
+    }
+  }
+}

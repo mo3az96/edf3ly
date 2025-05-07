@@ -1,0 +1,87 @@
+.mode-switcher {
+  .switch {
+    cursor: pointer;
+  }
+
+  .mode-switch {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #f6f8fa;
+    padding: 5px;
+    box-shadow: 0px 1px 2px 0px $boxshadow;
+    border-radius: 55px;
+    width: fit-content;
+    cursor: pointer;
+    @include xs {
+      gap: 10px;
+    }
+    @include xxs {
+      padding: 2px;
+      gap: 5px;
+    }
+    .fixed & {
+      gap: 10px;
+      @include xxs {
+        padding: 2px;
+        gap: 5px;
+      }
+    }
+  }
+
+  .icon {
+    width: 45px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 1px 2px 0px $boxshadow;
+    background-color: #fff;
+    fill: #40444c;
+    stroke: #40444c;
+    padding: 10px;
+    transition: all 0.3s ease-in-out;
+    &.sun {
+      background-color: #010c42;
+      fill: #fff;
+      stroke: #fff;
+    }
+    @include xs {
+      width: 35px;
+    }
+    @include xxs {
+      width: 30px;
+      padding: 8px;
+    }
+    .fixed & {
+      width: 35px;
+      @include xxs {
+        width: 30px;
+        padding: 8px;
+      }
+    }
+  }
+
+  input {
+    display: none;
+
+    &:checked {
+      ~ .mode-switch {
+        .icon {
+          &.sun {
+            background-color: #fff;
+            fill: #40444c;
+            stroke: #40444c;
+          }
+
+          &.moon {
+            background-color: #010c42;
+            fill: #fff;
+            stroke: #fff;
+          }
+        }
+      }
+    }
+  }
+}

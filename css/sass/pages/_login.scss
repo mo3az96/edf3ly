@@ -1,0 +1,114 @@
+.login-content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 150px 0 50px;
+  background-color: $bg2;
+  overflow: hidden;
+  @include xs {
+    padding: 90px 0 40px;
+  }
+}
+.content-overflow {
+  max-height: 100%;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+.login-card {
+  width: 100%;
+  max-width: 490px;
+  background-color: $bg2;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 40px;
+  margin: 0 auto;
+  @include xxs {
+    padding: 20px;
+  }
+  .dark & {
+    background-color: $bg1;
+  }
+}
+
+.login-head {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  .login-subtitle {
+    font-size: 14px;
+    font-weight: 400;
+    color: $primaryColor;
+    margin: 0;
+    @include xxs {
+      font-size: 12px;
+    }
+  }
+  .login-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: $textColor;
+    line-height: 1.6;
+    @include xxs {
+      font-size: 20px;
+    }
+  }
+  .login-desc {
+    font-size: 12px;
+    font-weight: 400;
+    color: $secondaryTextColor;
+    margin: 0;
+  }
+}
+
+.form-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: $primaryColor;
+  line-height: 1.4;
+  transition: all 0.3s ease-in-out;
+  &:focus {
+    color: $primaryColor;
+  }
+  &:hover {
+    color: $secondaryColor;
+  }
+}
+
+.form-terms {
+  font-size: 14px;
+  font-weight: 400;
+  color: $secondaryTextColor;
+  margin: 0;
+  a {
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+}
+
+.auth-link {
+  padding: 16px 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: $secondaryTextColor;
+  a {
+    color: $primaryColor;
+    &:focus {
+      color: $primaryColor;
+    }
+    &:hover {
+      color: $textColor;
+    }
+  }
+}

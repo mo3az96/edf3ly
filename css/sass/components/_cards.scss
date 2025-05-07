@@ -1,0 +1,191 @@
+.home-cards {
+  display: flex;
+  align-items: end;
+  gap: 14px;
+  @media (max-width: 1359px) {
+    flex-wrap: wrap;
+  }
+}
+
+.total-card {
+  position: relative;
+  padding: 30px 20px;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 180px;
+  width: 291px;
+  padding: 30px;
+  flex-shrink: 0;
+  @media (min-width: 1360px) and (max-width: 1420px) {
+    width: 240px;
+  }
+  @include xs {
+    height: auto;
+    padding: 20px;
+  }
+  @include xxs {
+    width: 100%;
+  }
+  &:after,
+  &:before {
+    content: "";
+    width: 94px;
+    height: 94px;
+    background-color: #fff;
+    border-radius: 50%;
+    opacity: 0.1;
+    position: absolute;
+    bottom: -1px;
+    inset-inline-end: -33px;
+    z-index: 3;
+  }
+  &:after {
+    width: 95px;
+    bottom: -48px;
+    inset-inline-end: 7px;
+    z-index: 2;
+  }
+  .card-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    @include rtl {
+      object-position: top left;
+    }
+    @include ltr {
+      object-position: top right;
+    }
+  }
+  .card-text {
+    position: relative;
+    z-index: 4;
+    color: #fff;
+    :last-child {
+      margin-bottom: 0;
+    }
+  }
+  .card-title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0 0 12px;
+  }
+  .card-value {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 0 25px;
+    small {
+      font-weight: 600;
+      font-size: 20px;
+    }
+    @include xs {
+      margin-bottom: 12px;
+    }
+  }
+  .card-extra {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 13px;
+  }
+  .extra-tag {
+    background-color: #3bb774;
+    height: 26px;
+    padding: 0 10px;
+    border-radius: 13px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-family: $secondaryFont;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    fill: #fff;
+  }
+  .extra-price {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.5;
+    small {
+      font-size: 12px;
+    }
+  }
+}
+
+.statistics-cards {
+  display: flex;
+  align-items: end;
+  gap: 15px;
+  width: 100%;
+  @include sm {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  @include xs {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.currency-card {
+  flex: 1;
+  background-color: $bg2;
+  color: $secondaryTitle;
+  border-radius: 10px;
+  padding: 20px;
+  white-space: nowrap;
+  .dark & {
+    color: #E2E6EE;
+  }
+  @include xs {
+    padding: 10px 15px;
+  }
+  .currency-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+  }
+  .currency-name {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    small {
+      font-weight: 400;
+      font-size: 14px;
+    }
+    @include xs {
+      font-size: 14px;
+      small {
+        font-size: 12px;
+      }
+    }
+  }
+  .currency-total {
+    font-size: 24px;
+    line-height: 1.5;
+    font-weight: 700;
+    @include xs {
+      font-size: 20px;
+    }
+  }
+}

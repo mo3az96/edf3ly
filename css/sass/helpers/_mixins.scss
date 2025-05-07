@@ -1,0 +1,67 @@
+@mixin lg {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin xxs {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin mainBtn {
+  background: $primaryGradient;
+  color: #fff;
+  fill: #fff;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: $secondaryBg;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    z-index: -1;
+  }
+  &:focus {
+    color: #fff;
+  }
+  &:hover {
+    color: #fff;
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+@mixin ltr {
+  html[dir="ltr"] & {
+    @content;
+  }
+}
+@mixin rtl {
+  html[dir="rtl"] & {
+    @content;
+  }
+}

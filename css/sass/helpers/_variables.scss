@@ -1,0 +1,49 @@
+:root {
+  --secondaryTitle: #010c42;
+  --secondaryBg: #010c42;
+  --secondaryNav: #010c42;
+  --secondaryTextColor: #626c83;
+
+  --textColor: #40444c;
+
+  --bg1: #f9fafb;
+  --bg2: #fff;
+  --border:#f1f3f9;
+}
+
+$primaryColor: #ae5be9;
+$secondaryColor: #010c42;
+$secondaryBg: var(--secondaryBg);
+$secondaryTitle: var(--secondaryTitle);
+$secondaryNav: var(--secondaryNav);
+
+$tertiaryColor: #96a0b6;
+$textColor: var(--textColor);
+$secondaryTextColor: var(--secondaryTextColor);
+
+$bg1: var(--bg1);
+$bg2: var(--bg2);
+$boxshadow: #1018280d;
+
+$primaryFont: Alexandria;
+$secondaryFont: IBMPlexSans;
+
+$primaryGradient1: #de8ffa;
+$primaryGradient2: #ac57e9;
+$primaryGradient: linear-gradient(
+  247.78deg,
+  $primaryGradient1 0%,
+  $primaryGradient2 91.32%
+);
+
+.dark {
+  --secondaryTitle: #fff;
+  --secondaryBg: #4a86e7;
+  --secondaryNav: #ccd2e0;
+  --secondaryTextColor: #ccd2e0;
+  --textColor: #fff9ea;
+  
+  --bg1: #1c1f26;
+  --bg2: #2b2f39;
+  --border: #626c83;
+}

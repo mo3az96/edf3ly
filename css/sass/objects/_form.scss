@@ -1,0 +1,257 @@
+.form-group {
+  margin-bottom: 15px;
+  font-family: $secondaryFont;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .error {
+    color: #eb5757;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px 10px 0;
+  }
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+  .form-group {
+    margin: 0;
+  }
+  @include md {
+    grid-template-columns: 1fr;
+  }
+}
+.form-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  + .form-line {
+    padding-top: 0;
+  }
+}
+.form-label {
+  font-size: 16px;
+  font-weight: 400;
+  color: $textColor;
+  display: block;
+  margin: 0 0 6px;
+  .required & {
+    &:after {
+      content: "*";
+      color: #f00;
+    }
+  }
+}
+.form-control {
+  width: 100%;
+  border: 1px solid var(--border);
+  height: 41px;
+  border-radius: 12px;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: $textColor;
+  background-color: transparent;
+  transition: all 0.3s ease-in-out;
+  @include rtl {
+    text-align: right;
+  }
+  @include ltr {
+    text-align: left;
+  }
+  &::placeholder {
+    color: $tertiaryColor;
+  }
+  .success & {
+    border-color: #3bb774;
+  }
+  .error & {
+    border-color: #eb5757;
+  }
+  &:focus {
+    &:is(:not(select)) {
+      border-color: $primaryColor;
+    }
+  }
+  &:is(textarea) {
+    height: 80px;
+    resize: none;
+    font-size: 13px;
+    line-height: 1.2;
+    padding-block: 12px;
+  }
+}
+
+.input-content {
+  position: relative;
+  .form-control {
+    padding-inline-end: 40px;
+  }
+  .icon {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 14.5px;
+    inset-inline-end: 16px;
+    color: $tertiaryColor;
+    font-size: 14px;
+  }
+  .toggle-password {
+    &.active {
+      i {
+        &:before {
+          content: "\f070";
+        }
+      }
+    }
+  }
+}
+.date-content {
+  position: relative;
+  .form-control {
+    padding-inline-end: 25px;
+    padding-inline-start: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #626c83;
+    position: relative;
+    z-index: 1;
+  }
+  .calendar-icon {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 8px;
+    inset-inline-start: 10px;
+    fill: #626c83;
+    pointer-events: none;
+    z-index: 3;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    inset-inline-end: 10px;
+    width: 16px;
+    height: 16px;
+    background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.35355 10.8536C8.15829 11.0488 7.84171 11.0488 7.64645 10.8536L2.64645 5.85355C2.45118 5.65829 2.45118 5.34171 2.64645 5.14645C2.84171 4.95118 3.15829 4.95118 3.35355 5.14645L8 9.79289L12.6464 5.14645C12.8417 4.95118 13.1583 4.95118 13.3536 5.14645C13.5488 5.34171 13.5488 5.65829 13.3536 5.85355L8.35355 10.8536Z" fill="%23626C83" stroke="%23626C83" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px;
+    z-index: 3;
+    pointer-events: none;
+  }
+  &::before {
+    content: attr(data-placeholder);
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: calc(100% - 2px);
+    height: calc(40px - 2px);
+    display: flex;
+    align-items: center;
+    padding-inline-end: 25px;
+    padding-inline-start: 40px;
+    background-color: $bg2;
+    z-index: 2;
+    pointer-events: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #626c83;
+    border-radius: 12px;
+    .dark & {
+      background-color: $bg1;
+    }
+  }
+  &.active {
+    &::before {
+      display: none;
+    }
+  }
+  @include xs {
+    flex: 1;
+  }
+}
+
+.checkbox {
+  label {
+    cursor: pointer;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .checktext {
+    font-size: 14px;
+    font-weight: 400;
+    color: $secondaryTextColor;
+    line-height: 1.8;
+  }
+  .checkmark {
+    border: 2px solid #f1f3f9;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease-in-out;
+    &::after {
+      content: "\f00c";
+      font-family: "Font Awesome 6 pro";
+      font-weight: 400;
+      font-size: 12px;
+      color: #fff;
+      transform: scale(0) rotate(360deg);
+      transition: all 0.3s ease-in-out;
+    }
+    .dark & {
+      border-color: $tertiaryColor;
+    }
+  }
+
+  input {
+    display: none;
+    &:checked {
+      + .checkmark {
+        background-color: $primaryColor;
+        border-color: $primaryColor;
+        &::after {
+          transform: scale(1) rotate(0deg);
+        }
+      }
+    }
+  }
+}
+
+.form-footer {
+  width: 100%;
+  margin-top: 25px;
+  @include sm {
+    margin-top: 0;
+  }
+}
+.form-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 48px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: $secondaryFont;
+  @include mainBtn;
+}

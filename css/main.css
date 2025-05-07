@@ -213,6 +213,34 @@ svg {
   content: "\f39e";
 }
 
+html {
+  font-size: 16px; /* Base: Desktop & large laptops */
+}
+
+/* Medium devices (tablets & small laptops) */
+@media (max-width: 1200px) {
+  html {
+    font-size: 15px;
+  }
+}
+/* Tablets (portrait) and large phones */
+@media (max-width: 992px) {
+  html {
+    font-size: 14px;
+  }
+}
+/* Phones (landscape + portrait) */
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+}
+/* Small phones (iPhone SE, older Androids) */
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+}
 @font-face {
   font-family: "Alexandria";
   src: url("../fonts/Alexandria/Alexandria-Bold.woff2") format("woff2"), url("../fonts/Alexandria/Alexandria-Bold.woff") format("woff"), url("../fonts/Alexandria/Alexandria-Bold.ttf") format("truetype");

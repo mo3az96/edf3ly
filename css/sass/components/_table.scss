@@ -1,0 +1,357 @@
+table {
+  &.data-table {
+    > thead {
+      > tr {
+        > th {
+          padding: 11.25px 24px;
+          @include sm {
+            padding: 10px 15px;
+          }
+          div {
+            &.dt-column-header {
+              display: flex;
+              align-items: center;
+              justify-content: start;
+              gap: 4px;
+              span {
+                &.dt-column-title {
+                  font-size: 14px;
+                  font-weight: 500;
+                  line-height: 1.5;
+                  color: $tertiaryColor;
+                  width: fit-content;
+                  flex-grow: 0;
+                }
+              }
+            }
+          }
+          &.dt-type-numeric {
+            div {
+              &.dt-column-header {
+                text-align: start;
+                flex-direction: row;
+              }
+            }
+          }
+          &.dt-orderable-asc,
+          &.dt-orderable-desc {
+            span {
+              &.dt-column-order {
+                width: auto;
+                height: auto;
+
+                &:after,
+                &::before {
+                  position: relative;
+                  inset: unset;
+                  width: 16px;
+                  height: 16px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  font-family: "Font Awesome 6 Pro";
+                  font-weight: 400;
+                  color: $tertiaryColor;
+                  font-size: 10px;
+                  opacity: 1;
+                  display: none;
+                }
+                &:after {
+                  content: "\f063";
+                }
+                &::before {
+                  content: "\f062";
+                }
+              }
+            }
+          }
+
+          &.dt-ordering-desc {
+            span {
+              &.dt-column-order {
+                &:after {
+                  display: flex;
+                }
+                &::before {
+                  display: none;
+                }
+              }
+            }
+          }
+          &.dt-ordering-asc {
+            span {
+              &.dt-column-order {
+                &:after {
+                  display: none;
+                }
+                &::before {
+                  display: flex;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    > tbody {
+      > tr {
+        > td {
+          padding: 15.75px 24px;
+          @include sm {
+            padding: 10px 15px;
+          }
+          &.dt-type-numeric {
+            .table-value {
+              direction: ltr;
+            }
+            [dir="rtl"] & {
+              text-align: start;
+            }
+          }
+        }
+      }
+    }
+    .table-value {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+      color: $secondaryTextColor;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: fit-content;
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #626c831a;
+        border-radius: 8px;
+        width: 40px;
+        height: 40px;
+        fill: #626c83;
+        stroke: #626c83;
+        color: #626c83;
+        flex-shrink: 0;
+        @include sm {
+          display: none;
+        }
+        .home-table &,
+        .dark & {
+          background-color: rgba($primaryColor, 0.1);
+          fill: $primaryColor;
+          stroke: $primaryColor;
+          color: $primaryColor;
+        }
+      }
+      .dark & {
+        color: #96a0b6;
+      }
+    }
+    .id-value {
+      font-weight: 500;
+      color: $textColor;
+      .dark & {
+        color: #96a0b6;
+      }
+    }
+
+    .status-label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.5;
+      padding: 0 8px;
+      height: 24px;
+      width: fit-content;
+      border-radius: 12px;
+      background-color: lighten($primaryColor, 32%);
+      color: $primaryColor;
+      &.pending {
+        background-color: #f0f3fa;
+        color: #96a0b6;
+        .dark & {
+          background-color: #a7acb8;
+          color: #40444c;
+        }
+      }
+      &.completed {
+        background-color: #ecfaf2;
+        color: #3bb774;
+      }
+      &.canceled {
+        background-color: #fdeeee;
+        color: #d64f4f;
+      }
+      &.inProgress {
+        background-color: #fff6e6;
+        color: #e89900;
+      }
+      &.failed {
+        background-color: #fdeeee;
+        color: #eb5757;
+      }
+    }
+  }
+}
+
+.dt-container {
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px;
+    background-color: transparent;
+    border-top: 1px solid var(--border);
+    .dark & {
+      border-top-color: #31343b;
+    }
+    @include sm {
+      flex-wrap: wrap;
+      padding: 20px 15px;
+      gap: 15px 0;
+    }
+    @include xs {
+      flex-direction: column;
+    }
+    .dt-length {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      label {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        color: $secondaryTextColor;
+        .dark & {
+          color: #626c83;
+        }
+      }
+      select {
+        border: none;
+        padding: 0;
+        height: auto;
+        border-radius: 0;
+        width: 42px;
+        font-size: 14px;
+        font-weight: 400;
+        color: $textColor;
+        background-image: url('data:image/svg+xml,<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.25 1.875L8 8.125L1.75 1.875" stroke="%2340444C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        background-position: left center;
+        @include ltr {
+          background-position: left center;
+        }
+      }
+      @include sm {
+        width: 50%;
+        justify-content: flex-start;
+        order: 1;
+      }
+      @include xs {
+        width: 100%;
+        justify-content: center;
+      }
+      .dark & {
+        color: #626c83;
+      }
+    }
+    .dt-info {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+      color: $secondaryTextColor;
+      .dark & {
+        color: #626c83;
+      }
+      @include sm {
+        width: 50%;
+        text-align: end;
+        order: 2;
+      }
+      @include xs {
+        width: 100%;
+        text-align: center;
+      }
+    }
+    .dt-paging {
+      @include sm {
+        width: 100%;
+        order: 3;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        button {
+          &.dt-paging-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            aspect-ratio: 1;
+            height: auto;
+            margin: 0;
+            padding: 0;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: $textColor;
+            border-radius: 6px;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              border: none;
+              color: $primaryColor !important;
+              background: none;
+            }
+            &.current {
+              border: none;
+              background: none;
+              background-color: rgba($primaryColor, 0.1);
+              color: $primaryColor !important;
+            }
+            &.disabled {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.table-btn {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $primaryColor;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 88px;
+  height: 41px;
+  width: fit-content;
+  padding: 0 10px;
+  border-radius: 12px;
+  background-color: rgba($primaryColor, 0.1);
+  transition: all 0.3s ease-in-out;
+  i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+  }
+  &:focus {
+    color: $primaryColor;
+  }
+  &:hover {
+    color: #fff;
+    background-color: $primaryColor;
+  }
+}
