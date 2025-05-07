@@ -761,6 +761,8 @@ html[dir=ltr] .form-control {
 @media (max-width: 767px) {
   .content-header {
     gap: 1rem;
+  }
+  .content-header:has(.content-filters) {
     flex-direction: column;
   }
 }
