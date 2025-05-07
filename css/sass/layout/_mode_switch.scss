@@ -6,41 +6,41 @@
   .mode-switch {
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 1.875rem;
     background-color: #f6f8fa;
-    padding: 5px;
-    box-shadow: 0px 1px 2px 0px $boxshadow;
-    border-radius: 55px;
+    padding: .3125rem;
+    box-shadow: 0rem .0625rem .125rem 0rem $boxshadow;
+    border-radius: 3.4375rem;
     width: fit-content;
     cursor: pointer;
     @include xs {
-      gap: 10px;
+      gap: .625rem;
     }
     @include xxs {
-      padding: 2px;
-      gap: 5px;
+      padding: .125rem;
+      gap: .3125rem;
     }
     .fixed & {
-      gap: 10px;
+      gap: .625rem;
       @include xxs {
-        padding: 2px;
-        gap: 5px;
+        padding: .125rem;
+        gap: .3125rem;
       }
     }
   }
 
   .icon {
-    width: 45px;
+    width: 2.8125rem;
     aspect-ratio: 1;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0px 1px 2px 0px $boxshadow;
+    box-shadow: 0rem .0625rem .125rem 0rem $boxshadow;
     background-color: #fff;
     fill: #40444c;
     stroke: #40444c;
-    padding: 10px;
+    padding: .625rem;
     transition: all 0.3s ease-in-out;
     &.sun {
       background-color: #010c42;
@@ -48,17 +48,17 @@
       stroke: #fff;
     }
     @include xs {
-      width: 35px;
+      width: 2.1875rem;
     }
     @include xxs {
-      width: 30px;
-      padding: 8px;
+      width: 1.875rem;
+      padding: .5rem;
     }
     .fixed & {
-      width: 35px;
+      width: 2.1875rem;
       @include xxs {
-        width: 30px;
-        padding: 8px;
+        width: 1.875rem;
+        padding: .5rem;
       }
     }
   }

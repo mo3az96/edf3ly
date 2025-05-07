@@ -1,36 +1,43 @@
 .page-header {
   display: grid;
-  grid-template-columns: 270px 1fr;
-  gap: 20px;
+  grid-template-columns: 16.875rem 1fr;
+  gap: 1.25rem;
   align-items: center;
   height: fit-content;
-  min-height: 47px;
-  margin-bottom: 23px;
+  min-height: 2.9375rem;
+  margin-bottom: 1.4375rem;
   width: 100%;
   transition: all 0.3s ease-in-out;
   &:has(.search-form) {
-    @include sm {
+    @include xs {
       grid-template-columns: 1fr;
     }
   }
-  @include xs {
+  @include xs{
+    gap: 1rem;
+  }
+  @include xxs {
+    min-height: auto;
     grid-template-columns: 1fr;
   }
 }
 
 .user-name {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: $textColor;
   font-weight: 600;
   margin: 0;
   i {
     font-family: $secondaryFont;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     font-style: unset;
   }
   .dark & {
     color: #ccd2e0;
+  }
+  @include xxs{
+    text-align: center;
   }
 }
 
@@ -38,7 +45,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 15px;
+  gap: 0.9375rem;
   @include xxs {
     flex-direction: column;
   }

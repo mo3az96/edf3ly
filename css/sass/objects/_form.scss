@@ -1,21 +1,21 @@
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: .9375rem;
   font-family: $secondaryFont;
   &:last-child {
     margin-bottom: 0;
   }
   .error {
     color: #eb5757;
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
-    padding: 10px 10px 0;
+    padding: .625rem .625rem 0;
   }
 }
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 15px;
+  gap: .9375rem;
+  margin-bottom: .9375rem;
   .form-group {
     margin: 0;
   }
@@ -27,17 +27,17 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 0;
+  padding: .3125rem 0;
   + .form-line {
     padding-top: 0;
   }
 }
 .form-label {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 400;
   color: $textColor;
   display: block;
-  margin: 0 0 6px;
+  margin: 0 0 .375rem;
   .required & {
     &:after {
       content: "*";
@@ -47,11 +47,11 @@
 }
 .form-control {
   width: 100%;
-  border: 1px solid var(--border);
-  height: 41px;
-  border-radius: 12px;
-  padding: 0 14px;
-  font-size: 14px;
+  border: .0625rem solid var(--border);
+  height: 2.5625rem;
+  border-radius: .75rem;
+  padding: 0 .875rem;
+  font-size: .875rem;
   font-weight: 500;
   color: $textColor;
   background-color: transparent;
@@ -77,30 +77,30 @@
     }
   }
   &:is(textarea) {
-    height: 80px;
+    height: 5rem;
     resize: none;
-    font-size: 13px;
+    font-size: .8125rem;
     line-height: 1.2;
-    padding-block: 12px;
+    padding-block: .75rem;
   }
 }
 
 .input-content {
   position: relative;
   .form-control {
-    padding-inline-end: 40px;
+    padding-inline-end: 2.5rem;
   }
   .icon {
     position: absolute;
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 14.5px;
-    inset-inline-end: 16px;
+    top: .9063rem;
+    inset-inline-end: 1rem;
     color: $tertiaryColor;
-    font-size: 14px;
+    font-size: .875rem;
   }
   .toggle-password {
     &.active {
@@ -115,9 +115,9 @@
 .date-content {
   position: relative;
   .form-control {
-    padding-inline-end: 25px;
-    padding-inline-start: 40px;
-    font-size: 14px;
+    padding-inline-end: 1.5625rem;
+    padding-inline-start: 2.5rem;
+    font-size: .875rem;
     font-weight: 400;
     color: #626c83;
     position: relative;
@@ -125,13 +125,13 @@
   }
   .calendar-icon {
     position: absolute;
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    top: 8px;
-    inset-inline-start: 10px;
+    top: .5rem;
+    inset-inline-start: .625rem;
     fill: #626c83;
     pointer-events: none;
     z-index: 3;
@@ -141,34 +141,34 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    inset-inline-end: 10px;
-    width: 16px;
-    height: 16px;
+    inset-inline-end: .625rem;
+    width: 1rem;
+    height: 1rem;
     background-image: url('data:image/svg+xml,<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.35355 10.8536C8.15829 11.0488 7.84171 11.0488 7.64645 10.8536L2.64645 5.85355C2.45118 5.65829 2.45118 5.34171 2.64645 5.14645C2.84171 4.95118 3.15829 4.95118 3.35355 5.14645L8 9.79289L12.6464 5.14645C12.8417 4.95118 13.1583 4.95118 13.3536 5.14645C13.5488 5.34171 13.5488 5.65829 13.3536 5.85355L8.35355 10.8536Z" fill="%23626C83" stroke="%23626C83" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 16px;
+    background-size: 1rem;
     z-index: 3;
     pointer-events: none;
   }
   &::before {
     content: attr(data-placeholder);
     position: absolute;
-    top: 1px;
-    left: 1px;
-    width: calc(100% - 2px);
-    height: calc(40px - 2px);
+    top: .0625rem;
+    left: .0625rem;
+    width: calc(100% - .125rem);
+    height: calc(2.5rem - .125rem);
     display: flex;
     align-items: center;
-    padding-inline-end: 25px;
-    padding-inline-start: 40px;
+    padding-inline-end: 1.5625rem;
+    padding-inline-start: 2.5rem;
     background-color: $bg2;
     z-index: 2;
     pointer-events: none;
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 400;
     color: #626c83;
-    border-radius: 12px;
+    border-radius: .75rem;
     .dark & {
       background-color: $bg1;
     }
@@ -189,19 +189,19 @@
     width: fit-content;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: .5rem;
   }
   .checktext {
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 400;
     color: $secondaryTextColor;
     line-height: 1.8;
   }
   .checkmark {
-    border: 2px solid #f1f3f9;
-    width: 16px;
-    height: 16px;
-    border-radius: 2px;
+    border: .125rem solid #f1f3f9;
+    width: 1rem;
+    height: 1rem;
+    border-radius: .125rem;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -212,7 +212,7 @@
       content: "\f00c";
       font-family: "Font Awesome 6 pro";
       font-weight: 400;
-      font-size: 12px;
+      font-size: .75rem;
       color: #fff;
       transform: scale(0) rotate(360deg);
       transition: all 0.3s ease-in-out;
@@ -238,7 +238,7 @@
 
 .form-footer {
   width: 100%;
-  margin-top: 25px;
+  margin-top: 1.5625rem;
   @include sm {
     margin-top: 0;
   }
@@ -248,9 +248,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 48px;
-  border-radius: 8px;
-  font-size: 14px;
+  height: 3rem;
+  border-radius: .5rem;
+  font-size: .875rem;
   font-weight: 700;
   font-family: $secondaryFont;
   @include mainBtn;

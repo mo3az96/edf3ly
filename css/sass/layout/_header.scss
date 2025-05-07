@@ -1,16 +1,19 @@
 body {
-  --header: 100px;
+  --header: 6.25rem;
   --fixed-header: var(--header);
   --side-height: var(--header);
   &:has(.fixed) {
-    --fixed-header: 70px;
-    --side-height: -5px;
+    --fixed-header: 4.375rem;
+    --side-height: -0.3125rem;
+  }
+  @include sm {
+    --header: 5rem;
   }
   @include xs {
-    --header: 62px;
+    --header: 4.6rem;
     &:has(.fixed) {
-      --fixed-header: 45px;
-      --side-height: -25px;
+      --fixed-header: 2.8125rem;
+      --side-height: -1.5625rem;
     }
   }
 }
@@ -21,15 +24,15 @@ header {
   left: 0;
   width: 100%;
   z-index: 9999;
-  border-bottom: 1px solid transparent;
+  border-bottom: 0.0625rem solid transparent;
   .login-page & {
     background-color: transparent;
   }
   &.fixed {
-    box-shadow: 0 2px 4px rgba(16, 24, 40, 0.1);
+    box-shadow: 0 0.125rem 0.25rem rgba(16, 24, 40, 0.1);
     border-bottom-color: #f1f3f9;
     .dark & {
-      box-shadow: 0 2px 4px rgba(#f1f3f9, 0.1);
+      box-shadow: 0 0.125rem 0.25rem rgba(#f1f3f9, 0.1);
       border-bottom-color: rgba(#f1f3f9, 0.1);
     }
   }
@@ -39,41 +42,41 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
-  padding: 15px 0 16px;
+  gap: 1.875rem;
+  padding: 0.9375rem 0 1rem;
   transition: all 0.3s ease-in-out;
   @include lg {
-    gap: 135px;
+    gap: 8.4375rem;
     .login-page & {
-      padding: 30px 0 0;
+      padding: 1.875rem 0 0;
     }
   }
-  @include xs {
-    padding: 10px 0;
-    gap: 15px;
+  @include sm {
+    padding: 0.625rem 0;
+    gap: 0.9375rem;
   }
   .fixed & {
-    padding: 10px 0;
-    @include xs {
-      padding: 5px 0;
-      gap: 10px;
+    padding: 0.625rem 0;
+    @include sm {
+      padding: 0.3125rem 0;
+      gap: 0.625rem;
     }
   }
 }
 
 .logo {
-  width: 169px;
+  width: 10.5625rem;
   aspect-ratio: 169/69;
   display: flex;
   align-items: center;
   transition: all 0.3s ease-in-out;
-  @include xs {
-    width: 120px;
+  @include sm {
+    width: 7.5rem;
   }
   .fixed & {
-    width: 120px;
-    @include xs {
-      width: 85px;
+    width: 7.5rem;
+    @include sm {
+      width: 5.3125rem;
     }
   }
   .dark {
@@ -96,14 +99,14 @@ header {
   margin-inline-start: auto;
   display: flex;
   align-items: center;
-  gap: 30px;
-  @include xs {
-    gap: 15px;
+  gap: 1.875rem;
+  @include sm {
+    gap: 0.9375rem;
   }
 }
 
 .lang-link {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: $secondaryTitle;
   line-height: 1.2;
   text-transform: uppercase;
@@ -117,8 +120,8 @@ header {
 .header_icon-content {
   display: flex;
   align-items: end;
-  width: 26px;
-  height: 26px;
+  width: 1.625rem;
+  height: 1.625rem;
   position: relative;
   @include rtl {
     justify-content: end;
@@ -126,9 +129,9 @@ header {
   @include ltr {
     justify-content: start;
   }
-  @include xs {
-    width: 25px;
-    height: 25px;
+  @include sm {
+    width: 1.5625rem;
+    height: 1.5625rem;
   }
 }
 .header-icon {
@@ -143,27 +146,27 @@ header {
     position: absolute;
     top: 0;
     right: 0;
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 0.75rem;
     color: #fff;
     background-color: #eb5757;
   }
 }
 
 .user-icon {
-  width: 40px;
+  width: 2.5rem;
   aspect-ratio: 1;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   overflow: hidden;
-  @include xs {
-    width: 30px;
+  @include sm {
+    width: 1.875rem;
   }
 }

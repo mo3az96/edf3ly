@@ -1,48 +1,55 @@
 .home-cards {
   display: flex;
   align-items: end;
-  gap: 14px;
-  @media (max-width: 1359px) {
-    flex-wrap: wrap;
+  gap: 0.875rem;
+  @include xs {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
 .total-card {
   position: relative;
-  padding: 30px 20px;
-  border-radius: 20px;
+  padding: 1.875rem 1.25rem;
+  border-radius: 1.25rem;
   overflow: hidden;
-  height: 180px;
-  width: 291px;
-  padding: 30px;
+  width: 18.1875rem;
+  // height: 11.25rem;
+  aspect-ratio: 291/180;
+  padding: 1.875rem;
   flex-shrink: 0;
-  @media (min-width: 1360px) and (max-width: 1420px) {
-    width: 240px;
+  display: flex;
+  align-items: start;
+  @include sm {
+    align-items: end;
+    padding: 1.25rem;
+    width: 13.5rem;
+    height: 11.5rem;
   }
   @include xs {
-    height: auto;
-    padding: 20px;
-  }
-  @include xxs {
     width: 100%;
+    max-width: 18.1875rem;
+    height: auto;
+    align-items: center;
+    margin: 0 auto;
   }
   &:after,
   &:before {
     content: "";
-    width: 94px;
-    height: 94px;
+    width: 5.875rem;
+    height: 5.875rem;
     background-color: #fff;
     border-radius: 50%;
     opacity: 0.1;
     position: absolute;
-    bottom: -1px;
-    inset-inline-end: -33px;
+    bottom: -0.0625rem;
+    inset-inline-end: -2.0625rem;
     z-index: 3;
   }
   &:after {
-    width: 95px;
-    bottom: -48px;
-    inset-inline-end: 7px;
+    width: 5.9375rem;
+    bottom: -3rem;
+    inset-inline-end: 0.4375rem;
     z-index: 2;
   }
   .card-bg {
@@ -65,45 +72,46 @@
     }
   }
   .card-title {
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.2;
-    margin: 0 0 12px;
+    margin: 0 0 0.75rem;
+    @include xs {
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
   }
   .card-value {
     display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 24px;
+    gap: 0.5rem;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.5;
-    margin: 0 0 25px;
+    margin: 0 0 1.5625rem;
     small {
       font-weight: 600;
-      font-size: 20px;
-    }
-    @include xs {
-      margin-bottom: 12px;
+      font-size: 83%;
     }
   }
   .card-extra {
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 13px;
+    gap: 0.8125rem;
   }
   .extra-tag {
     background-color: #3bb774;
-    height: 26px;
-    padding: 0 10px;
-    border-radius: 13px;
+    height: 1.625rem;
+    padding: 0 0.625rem;
+    border-radius: 0.8125rem;
     width: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
+    gap: 0.3125rem;
     font-family: $secondaryFont;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
     color: #fff;
     fill: #fff;
@@ -111,12 +119,12 @@
   .extra-price {
     display: flex;
     align-items: center;
-    gap: 5px;
-    font-size: 12px;
+    gap: 0.3125rem;
+    font-size: 0.75rem;
     font-weight: 500;
     line-height: 1.5;
     small {
-      font-size: 12px;
+      font-size: 100%;
     }
   }
 }
@@ -124,15 +132,11 @@
 .statistics-cards {
   display: flex;
   align-items: end;
-  gap: 15px;
+  gap: 0.9375rem;
   width: 100%;
-  @include sm {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-  }
   @include xs {
-    grid-template-columns: repeat(1, 1fr);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -140,52 +144,43 @@
   flex: 1;
   background-color: $bg2;
   color: $secondaryTitle;
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
   white-space: nowrap;
   .dark & {
-    color: #E2E6EE;
-  }
-  @include xs {
-    padding: 10px 15px;
+    color: #e2e6ee;
   }
   .currency-icon {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    aspect-ratio: 1;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 15px;
+    margin-bottom: 0.9375rem;
   }
   .currency-name {
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 10px;
-    font-size: 16px;
+    gap: 0.625rem;
+    font-size: 1rem;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
     small {
       font-weight: 400;
-      font-size: 14px;
-    }
-    @include xs {
-      font-size: 14px;
-      small {
-        font-size: 12px;
-      }
+      font-size: 87.5%;
     }
   }
   .currency-total {
-    font-size: 24px;
+    font-size: 1.5rem;
     line-height: 1.5;
     font-weight: 700;
     @include xs {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
   }
 }

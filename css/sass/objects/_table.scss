@@ -4,7 +4,7 @@
   -webkit-overflow-scrolling: touch;
   table {
     width: 100%;
-    min-width: 600px;
+    min-width: 37.5rem;
     border-collapse: collapse;
   }
   th,
@@ -50,7 +50,7 @@
     }
     > tr {
       > td {
-        border-top: 1px solid var(--border);
+        border-top: .0625rem solid var(--border);
         .dark & {
           border-top-color: #31343b;
         }

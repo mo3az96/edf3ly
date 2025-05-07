@@ -1,7 +1,7 @@
 .search-form {
   position: relative;
   width: 43%;
-  max-width: 429px;
+  max-width: 26.8125rem;
   @include xs {
     width: 39%;
   }
@@ -14,9 +14,9 @@
   .search-btn {
     position: absolute;
     top: 50%;
-    inset-inline-end: 15px;
+    inset-inline-end: .9375rem;
     transform: translateY(-50%);
-    width: 24px;
+    width: 1.5rem;
     aspect-ratio: 1;
     display: flex;
     align-items: center;

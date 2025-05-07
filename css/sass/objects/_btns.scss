@@ -3,10 +3,10 @@
   align-items: center;
   justify-content: center;
   margin-inline-start: auto;
-  gap: 15px;
+  gap: .9375rem;
   @include xs {
     margin: 0 auto;
-    gap: 10px;
+    gap: .625rem;
   }
 }
 
@@ -14,14 +14,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  height: 40px;
-  border-radius: 8px;
+  gap: .625rem;
+  height: 2.5rem;
+  border-radius: .5rem;
   width: fit-content;
-  min-width: 100px;
-  padding: 0 15px;
-  font-size: 14px;
+  min-width: 6.25rem;
+  padding: 0 .9375rem;
+  font-size: .875rem;
   font-weight: 400;
+  white-space: nowrap;
   transition: all 0.3s ease-in-out;
   &.send {
     background-color: #fff;

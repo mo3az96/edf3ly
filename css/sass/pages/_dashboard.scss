@@ -1,48 +1,48 @@
 .form-page {
-  padding: 40px 30px;
+  padding: 2.5rem 1.875rem;
   background-color: $bg2;
-  border-radius: 16px;
+  border-radius: 1rem;
   @include sm {
-    padding: 30px 15px;
+    padding: 1.875rem .9375rem;
   }
 }
 
 .form-title {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   color: $textColor;
   line-height: 1.6;
-  margin: 0 0 30px;
+  margin: 0 0 1.875rem;
   @include xs {
-    font-size: 18px;
-    margin: 0 0 20px;
+    font-size: 1.125rem;
+    margin: 0 0 1.25rem;
   }
 }
 .form-content {
   display: grid;
-  grid-template-columns: 1fr 410px;
+  grid-template-columns: 1fr 25.625rem;
   align-items: start;
-  gap: 30px;
+  gap: 1.875rem;
   @include md {
-    grid-template-columns: 1fr 210px;
-    gap: 15px;
+    grid-template-columns: 1fr 13.125rem;
+    gap: .9375rem;
   }
   @include xs {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 1.875rem;
   }
 }
 /////////////////////////
 .form-notes {
-  border-inline-start: 1px solid #e2e6ee;
-  padding-inline-start: 30px;
-  padding-bottom: 26px;
+  border-inline-start: .0625rem solid #e2e6ee;
+  padding-inline-start: 1.875rem;
+  padding-bottom: 1.625rem;
   .dark & {
     border-inline-start-color: $bg1;
   }
   @include md {
-    padding-inline-start: 15px;
-    padding-bottom: 15px;
+    padding-inline-start: .9375rem;
+    padding-bottom: .9375rem;
   }
   @include xs {
     padding: 0;
@@ -50,13 +50,13 @@
   }
 }
 .notes-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 600;
   color: $textColor;
   line-height: 1.6;
-  margin: 0 0 30px;
+  margin: 0 0 1.875rem;
   @include md {
-    margin: 0 0 15px;
+    margin: 0 0 .9375rem;
   }
 }
 
@@ -64,17 +64,17 @@
   display: flex;
   flex-direction: column;
   line-height: 1.8;
-  font-size: 14px;
+  font-size: .875rem;
   color: $secondaryTextColor;
-  margin-bottom: 15px;
+  margin-bottom: .9375rem;
   @include md {
-    font-size: 12px;
+    font-size: .75rem;
   }
   .value {
     color: $textColor;
-    font-size: 16px;
+    font-size: 1rem;
     @include md {
-      font-size: 14px;
+      font-size: .875rem;
     }
   }
   &:last-child {
@@ -91,15 +91,15 @@
   }
   .form-control {
     font-weight: 500;
-    font-size: 14px;
-    height: 48px;
-    border-radius: 12px;
+    font-size: .875rem;
+    height: 3rem;
+    border-radius: .75rem;
     &:is(textarea) {
-      height: 80px;
+      height: 5rem;
     }
   }
   .form-label {
-    font-size: 14px;
+    font-size: .875rem;
     line-height: 1.2;
     color: $secondaryTitle;
     span {
@@ -111,11 +111,11 @@
 .form_label-container {
   display: flex;
   align-items: center;
-  gap: 10px 30px;
+  gap: .625rem 1.875rem;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: .625rem;
   @include xs {
-    gap: 10px 30px;
+    gap: .625rem 1.875rem;
     flex-wrap: wrap;
   }
   .form-label {
@@ -133,27 +133,27 @@
 
   .currency-select {
     position: absolute;
-    inset-block: 1px;
-    inset-inline-end: 1px;
-    width: 120px;
+    inset-block: .0625rem;
+    inset-inline-end: .0625rem;
+    width: 11.25rem;
     border: none;
-    border-inline-start: 1px solid var(--border);
-    border-start-end-radius: 12px;
-    border-end-end-radius: 12px;
+    border-inline-start: .0625rem solid var(--border);
+    border-start-end-radius: .75rem;
+    border-end-end-radius: .75rem;
     @include xs {
-      width: 95px;
+      width: 5.9375rem;
     }
   }
 
   .select2-container {
     height: auto;
     position: absolute;
-    inset-block: 1px;
-    inset-inline-end: 1px;
+    inset-block: .0625rem;
+    inset-inline-end: .0625rem;
     border: none;
-    border-inline-start: 1px solid var(--border);
-    border-start-end-radius: 12px;
-    border-end-end-radius: 12px;
+    border-inline-start: .0625rem solid var(--border);
+    border-start-end-radius: .75rem;
+    border-end-end-radius: .75rem;
     .selection {
       height: 100%;
     }
@@ -166,25 +166,25 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 5px;
+      padding: 0 .3125rem;
       background-image: url('data:image/svg+xml,<svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.35355 5.85355C6.15829 6.04882 5.84171 6.04882 5.64645 5.85355L0.646446 0.853553C0.451184 0.658291 0.451184 0.341709 0.646446 0.146447C0.841709 -0.0488156 1.15829 -0.0488156 1.35355 0.146447L6 4.79289L10.6464 0.146447C10.8417 -0.0488152 11.1583 -0.0488152 11.3536 0.146447C11.5488 0.341709 11.5488 0.658292 11.3536 0.853554L6.35355 5.85355Z" fill="%2340444C"/></svg>');
-      background-size: 12px;
+      background-size: .75rem;
       background-repeat: no-repeat;
-      background-position: right 12px top 50%;
+      background-position: right .75rem top 50%;
       @include ltr {
-        background-position: right 12px top 50%;
+        background-position: right .75rem top 50%;
       }
       .dark & {
         background-image: url('data:image/svg+xml,<svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.35355 5.85355C6.15829 6.04882 5.84171 6.04882 5.64645 5.85355L0.646446 0.853553C0.451184 0.658291 0.451184 0.341709 0.646446 0.146447C0.841709 -0.0488156 1.15829 -0.0488156 1.35355 0.146447L6 4.79289L10.6464 0.146447C10.8417 -0.0488152 11.1583 -0.0488152 11.3536 0.146447C11.5488 0.341709 11.5488 0.658292 11.3536 0.853554L6.35355 5.85355Z" fill="%23fff"/></svg>');
       }
       .select2-selection__rendered {
         color: $secondaryTitle;
-        font-size: 14px;
+        font-size: .875rem;
         font-weight: 600;
         line-height: 1.2;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: .5rem;
         @include rtl {
           padding: 0;
         }
@@ -192,7 +192,7 @@
           padding: 0;
         }
         .state-img {
-          width: 40px;
+          width: 2.5rem;
           aspect-ratio: 1;
           border-radius: 50%;
           overflow: hidden;
@@ -201,7 +201,7 @@
           align-items: center;
           justify-content: center;
           @include xs {
-            width: 25px;
+            width: 1.5625rem;
           }
         }
       }
@@ -221,10 +221,10 @@
       direction: ltr;
     }
     .select2-results__options {
-      min-width: 150px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      padding: 8px 12px;
+      min-width: 9.375rem;
+      border-radius: .75rem;
+      border: .0625rem solid var(--border);
+      padding: .5rem .75rem;
       white-space: nowrap;
       background-color: $bg2;
       // overflow: hidden;
@@ -232,15 +232,15 @@
     .select2-results__option {
       background-color: transparent;
       color: $secondaryTitle;
-      font-size: 14px;
+      font-size: .875rem;
       font-weight: 600;
       line-height: 1.2;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: .5rem;
       transition: all 0.3s ease-in-out;
       .state-img {
-        width: 20px;
+        width: 1.25rem;
         aspect-ratio: 1;
         border-radius: 50%;
         overflow: hidden;
@@ -262,32 +262,32 @@
   }
   .select2-dropdown--above {
     .select2-results {
-      padding: 5px;
+      padding: .3125rem;
     }
   }
   .select2-dropdown--below {
     .select2-results {
-      padding: 5px;
+      padding: .3125rem;
     }
   }
 }
 
 .form_calc-container {
-  margin-bottom: 15px;
+  margin-bottom: .9375rem;
   .form-label {
     line-height: 1.5;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: .625rem;
   }
   i {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: rgba(#000, 0.05);
-    border-radius: 4px;
-    width: 20px;
-    height: 20px;
+    border-radius: .25rem;
+    width: 1.25rem;
+    height: 1.25rem;
     color: $secondaryTitle;
     .dark & {
       background-color: rgba(#fff, 0.05);
@@ -295,24 +295,24 @@
   }
 
   &.total {
-    border-top: 1px solid #dfdfdf;
-    padding: 9px 0;
+    border-top: .0625rem solid #dfdfdf;
+    padding: .5625rem 0;
     :last-child {
       font-weight: 600;
-      font-size: 16px;
+      font-size: 1rem;
       i {
-        font-size: 14px;
+        font-size: .875rem;
       }
     }
   }
   &.final-total {
-    padding: 5px 0;
+    padding: .3125rem 0;
     :last-child {
       font-weight: 600;
-      font-size: 24px;
+      font-size: 1.5rem;
       color: $primaryColor;
       i {
-        font-size: 14px;
+        font-size: .875rem;
         color: $secondaryTitle;
       }
     }
@@ -321,9 +321,9 @@
 
 .payment-select {
   .select2-container {
-    height: 48px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
+    height: 3rem;
+    border: .0625rem solid var(--border);
+    border-radius: .75rem;
     .selection {
       height: 100%;
     }
@@ -335,13 +335,13 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 3px 16px;
+      padding: .1875rem 1rem;
       background-image: url('data:image/svg+xml,<svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.35355 5.85355C6.15829 6.04882 5.84171 6.04882 5.64645 5.85355L0.646446 0.853553C0.451184 0.658291 0.451184 0.341709 0.646446 0.146447C0.841709 -0.0488156 1.15829 -0.0488156 1.35355 0.146447L6 4.79289L10.6464 0.146447C10.8417 -0.0488152 11.1583 -0.0488152 11.3536 0.146447C11.5488 0.341709 11.5488 0.658292 11.3536 0.853554L6.35355 5.85355Z" fill="%2340444C"/></svg>');
-      background-size: 12px;
+      background-size: .75rem;
       background-repeat: no-repeat;
-      background-position: left 12px top 50%;
+      background-position: left .75rem top 50%;
       @include ltr {
-        background-position: right 12px top 50%;
+        background-position: right .75rem top 50%;
       }
       .dark & {
         background-image: url('data:image/svg+xml,<svg width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.35355 5.85355C6.15829 6.04882 5.84171 6.04882 5.64645 5.85355L0.646446 0.853553C0.451184 0.658291 0.451184 0.341709 0.646446 0.146447C0.841709 -0.0488156 1.15829 -0.0488156 1.35355 0.146447L6 4.79289L10.6464 0.146447C10.8417 -0.0488152 11.1583 -0.0488152 11.3536 0.146447C11.5488 0.341709 11.5488 0.658292 11.3536 0.853554L6.35355 5.85355Z" fill="%23fff"/></svg>');
@@ -357,11 +357,11 @@
       .payment-content {
         display: flex;
         align-items: center;
-        gap: 11px;
+        gap: .6875rem;
       }
       .payment-img {
-        width: 24px;
-        height: 24px;
+        width: 1.5rem;
+        height: 1.5rem;
         overflow: hidden;
         background-color: #fff;
         border-radius: 50%;
@@ -373,17 +373,17 @@
       .payment-text {
         display: flex;
         flex-direction: column;
-        gap: 2px;
+        gap: .125rem;
         line-height: 1.2;
         font-weight: 400;
       }
       .payment-title {
         color: $secondaryTitle;
-        font-size: 16px;
+        font-size: 1rem;
       }
       .payment-note {
         color: $secondaryTextColor;
-        font-size: 12px;
+        font-size: .75rem;
       }
       .select2-selection__arrow {
         display: none;
@@ -399,10 +399,10 @@
     background-color: transparent;
 
     .select2-results__options {
-      min-width: 150px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      padding: 8px 12px;
+      min-width: 9.375rem;
+      border-radius: .75rem;
+      border: .0625rem solid var(--border);
+      padding: .5rem .75rem;
       white-space: nowrap;
       background-color: $bg2;
       // overflow: hidden;
@@ -410,15 +410,15 @@
     .select2-results__option {
       background-color: transparent;
       color: $secondaryTitle;
-      font-size: 14px;
+      font-size: .875rem;
       font-weight: 600;
       line-height: 1.2;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: .5rem;
       transition: all 0.3s ease-in-out;
       .payment-img {
-        width: 20px;
+        width: 1.25rem;
         aspect-ratio: 1;
         border-radius: 50%;
         overflow: hidden;
@@ -440,12 +440,12 @@
   }
   .select2-dropdown--above {
     .select2-results {
-      padding: 5px;
+      padding: .3125rem;
     }
   }
   .select2-dropdown--below {
     .select2-results {
-      padding: 5px;
+      padding: .3125rem;
     }
   }
 }
@@ -453,10 +453,9 @@
 .radios-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 12px 10px;
+  gap: .75rem .625rem;
   @include md {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    gap: .625rem;
   }
 }
 
@@ -464,14 +463,14 @@
   width: 100%;
   .payment-content {
     width: 100%;
-    border: 1px solid #e2e6ee;
-    border-radius: 8px;
+    border: .0625rem solid #e2e6ee;
+    border-radius: .5rem;
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 12px;
-    padding: 10px;
-    min-height: 70px;
+    gap: .75rem;
+    padding: .625rem;
+    min-height: 4.375rem;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     .dark & {
@@ -480,9 +479,9 @@
     }
   }
   .payment-img {
-    width: 44px;
-    height: 44px;
-    border: 1px solid #e2e6ee;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: .0625rem solid #e2e6ee;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -492,29 +491,32 @@
   .payment-text {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: .125rem;
     line-height: 1.2;
     font-weight: 400;
   }
   .payment-title {
     color: $secondaryTitle;
-    font-size: 14px;
+    font-size: .875rem;
+    @include xxs{
+      font-size: 0.625rem;
+    }
   }
   .payment-note {
     color: $secondaryTextColor;
-    font-size: 12px;
+    font-size: .75rem;
   }
   .checkmark {
     margin-inline-start: auto;
-    width: 16px;
-    height: 16px;
+    width: 1rem;
+    height: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     background-color: #fff;
-    border: 1px solid #e2e6ee;
-    font-size: 10px;
+    border: .0625rem solid #e2e6ee;
+    font-size: .625rem;
     i {
       color: #fff;
       transform: scale(0) rotate(180deg);

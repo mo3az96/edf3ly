@@ -1,25 +1,37 @@
 html {
-  font-size: 16px; /* Base: Desktop & large laptops */
+  font-size: 20px; /* Base: Desktop & large laptops */
 }
 
 /* Medium devices (tablets & small laptops) */
-@media (max-width: 1200px) {
+@media (max-width: 1920px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1440px) {
   html {
     font-size: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  html {
+    font-size: 12px;
   }
 }
 
 /* Tablets (portrait) and large phones */
 @media (max-width: 992px) {
   html {
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
 /* Phones (landscape + portrait) */
 @media (max-width: 768px) {
   html {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 

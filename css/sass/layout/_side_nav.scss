@@ -1,48 +1,75 @@
 .side-nav {
   position: sticky;
   height: fit-content;
-  top: calc(var(--fixed-header) + 25px);
-  @include xs {
-    top: calc(var(--fixed-header) + 15px);
+  top: calc(var(--fixed-header) + 1.5625rem);
+  &.mobile-nav {
+    display: none;
+    position: relative;
+    top: unset;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 1rem 0;
+  }
+  @include sm {
+    display: none;
+    &.mobile-nav {
+      display: block;
+    }
   }
 }
 
 .nav_list-content {
   height: fit-content;
-  max-height: calc(100vh - (var(--side-height) + 130px));
+  max-height: calc(100vh - (var(--side-height) + 8.125rem));
   overflow-y: auto;
-  box-shadow: 0px 1px 2px 0px $boxshadow;
+  box-shadow: 0rem 0.0625rem 0.125rem 0rem $boxshadow;
   background-color: $bg2;
-  padding: 20px;
-  border-radius: 20px;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
   &::-webkit-scrollbar {
     width: 0;
+    height: 0;
   }
   @include sm {
-    padding: 10px;
-    width: 65px;
-    border-radius: 35px;
+    padding: 0.625rem;
+    width: 100%;
+    border-radius: 2.1875rem;
+    overflow: hidden;
+    max-height: none;
+    height: auto;
+  }
+  @include xs {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 0;
   }
 }
 
 .nav-list {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 1.875rem;
   @include sm {
-    gap: 10px;
+    flex-direction: row;
+    gap: 0.625rem;
+    justify-content: center;
+  }
+  @include xs {
+    justify-content: start;
+    padding: 0.625rem;
+    width: fit-content;
   }
   .nav-item {
     position: relative;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 1.25rem;
     &:after {
       position: absolute;
       inset-inline: 0;
-      height: 45px;
+      height: 2.8125rem;
       width: 100%;
       background: $primaryGradient;
-      border-radius: 8px;
+      border-radius: 0.5rem;
       top: 50%;
       transform: translateY(-50%);
     }
@@ -51,11 +78,14 @@
         content: "";
       }
       &:first-of-type {
-        margin-top: 8px;
+        margin-top: 0.5rem;
       }
     }
     @include sm {
       padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       &::after {
         display: none;
       }
@@ -71,16 +101,16 @@
     align-items: center;
     justify-content: start;
     width: fit-content;
-    gap: 10px;
-    font-size: 14px;
+    gap: 0.625rem;
+    font-size: 0.875rem;
     color: $secondaryNav;
     fill: $secondaryNav;
     stroke: $secondaryNav;
     position: relative;
     z-index: 2;
     .icon {
-      width: 24px;
-      height: 24px;
+      width: 1.5rem;
+      height: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -104,14 +134,26 @@
       stroke: #ff3b30;
     }
     @include sm {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
+      width: 2.8125rem;
+      height: 2.8125rem;
+      border-radius: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
       &.active {
+        width: auto;
+        padding: 0 1rem;
         background: $primaryGradient;
+        .text {
+          display: block;
+          @include xxs {
+            display: none;
+          }
+        }
+        @include xxs {
+          width: 2.8125rem;
+          padding: 0;
+        }
       }
       .text {
         display: none;

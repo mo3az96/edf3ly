@@ -3,6 +3,7 @@ body {
   font-family: Alexandria;
   font-weight: 400;
   color: $textColor;
+  min-height: 100vh;
   &::-webkit-scrollbar {
     background-color: #f1f1f1;
     width: 4px;

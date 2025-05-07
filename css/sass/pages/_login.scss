@@ -4,11 +4,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 150px 0 50px;
+  padding: 9.375rem 0 3.125rem;
   background-color: $bg2;
   overflow: hidden;
   @include xs {
-    padding: 90px 0 40px;
+    padding: 5.625rem 0 2.5rem;
   }
 }
 .content-overflow {
@@ -20,14 +20,14 @@
 }
 .login-card {
   width: 100%;
-  max-width: 490px;
+  max-width: 30.625rem;
   background-color: $bg2;
-  border-radius: 16px;
+  border-radius: 1rem;
   overflow: hidden;
-  padding: 40px;
+  padding: 2.5rem;
   margin: 0 auto;
   @include xxs {
-    padding: 20px;
+    padding: 1.25rem;
   }
   .dark & {
     background-color: $bg1;
@@ -39,28 +39,28 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  gap: 12px;
-  margin-bottom: 30px;
+  gap: .75rem;
+  margin-bottom: 1.875rem;
   .login-subtitle {
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 400;
     color: $primaryColor;
     margin: 0;
     @include xxs {
-      font-size: 12px;
+      font-size: .75rem;
     }
   }
   .login-title {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     color: $textColor;
     line-height: 1.6;
     @include xxs {
-      font-size: 20px;
+      font-size: 1.25rem;
     }
   }
   .login-desc {
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 400;
     color: $secondaryTextColor;
     margin: 0;
@@ -68,7 +68,7 @@
 }
 
 .form-link {
-  font-size: 14px;
+  font-size: .875rem;
   font-weight: 400;
   color: $primaryColor;
   line-height: 1.4;
@@ -82,7 +82,7 @@
 }
 
 .form-terms {
-  font-size: 14px;
+  font-size: .875rem;
   font-weight: 400;
   color: $secondaryTextColor;
   margin: 0;
@@ -94,12 +94,12 @@
 }
 
 .auth-link {
-  padding: 16px 0 0;
+  padding: 1rem 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 5px;
-  font-size: 14px;
+  gap: .3125rem;
+  font-size: .875rem;
   line-height: 1.4;
   color: $secondaryTextColor;
   a {

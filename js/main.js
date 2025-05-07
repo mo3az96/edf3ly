@@ -109,11 +109,11 @@ $(document).ready(function () {
     loop: true,
     breakpoints: {
       0: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 5,
       },
-      992: {
-        slidesPerView: 2,
+      767: {
+        slidesPerView: 3,
         spaceBetween: 10,
       },
       1199: {
