@@ -2418,25 +2418,12 @@ html[dir=ltr] .header_icon-content {
   }
   .nav-list .nav-link.active {
     width: auto;
-    padding: 0 1rem;
+    padding: 0 1.15rem;
     background: linear-gradient(247.78deg, #de8ffa 0%, #ac57e9 91.32%);
   }
   .nav-list .nav-link.active .text {
     display: block;
   }
-}
-@media (max-width: 991px) and (max-width: 480px) {
-  .nav-list .nav-link.active .text {
-    display: none;
-  }
-}
-@media (max-width: 991px) and (max-width: 480px) {
-  .nav-list .nav-link.active {
-    width: 2.8125rem;
-    padding: 0;
-  }
-}
-@media (max-width: 991px) {
   .nav-list .nav-link .text {
     display: none;
   }

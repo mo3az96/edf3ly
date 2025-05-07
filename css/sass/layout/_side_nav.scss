@@ -142,18 +142,18 @@
       justify-content: center;
       &.active {
         width: auto;
-        padding: 0 1rem;
+        padding: 0 1.15rem;
         background: $primaryGradient;
         .text {
           display: block;
-          @include xxs {
-            display: none;
-          }
+          // @include xxs {
+          //   display: none;
+          // }
         }
-        @include xxs {
-          width: 2.8125rem;
-          padding: 0;
-        }
+        // @include xxs {
+        //   width: 2.8125rem;
+        //   padding: 0;
+        // }
       }
       .text {
         display: none;
