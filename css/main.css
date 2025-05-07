@@ -2380,6 +2380,7 @@ html[dir=ltr] .header_icon-content {
   fill: var(--secondaryNav);
   stroke: var(--secondaryNav);
   position: relative;
+  white-space: nowrap;
   z-index: 2;
 }
 .nav-list .nav-link .icon {
@@ -2461,13 +2462,13 @@ html[dir=ltr] .header_icon-content {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 9.375rem 0 3.125rem;
+  padding: 8rem 0 3rem;
   background-color: var(--bg2);
   overflow: hidden;
 }
 @media (max-width: 767px) {
   .login-content {
-    padding: 5.625rem 0 2.5rem;
+    padding: 5rem 0 3rem;
   }
 }
 
