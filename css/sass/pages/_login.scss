@@ -1,14 +1,41 @@
+.login-page {
+  font-size: 20px;
+
+  @media (max-width: 1920px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 15px;
+  }
+  .header {
+    padding: 1em 0 0;
+  }
+}
 .login-content {
+  background-size: cover;
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8rem 0 3rem;
+  padding: 5.5em 0 1.5em;
   background-color: $bg2;
   overflow: hidden;
-  @include xs {
-    padding: 5rem 0 3rem;
+  .form-group {
+    margin-bottom: 0.75em;
   }
 }
 .content-overflow {
@@ -20,14 +47,14 @@
 }
 .login-card {
   width: 100%;
-  max-width: 30.625rem;
+  max-width: 30.625em;
   background-color: $bg2;
-  border-radius: 1rem;
+  border-radius: 1em;
   overflow: hidden;
-  padding: 2.5rem;
+  padding: 2.5em;
   margin: 0 auto;
-  @include xxs {
-    padding: 1.25rem;
+  @media (max-width: 1440px) {
+    padding: 1.25em;
   }
   .dark & {
     background-color: $bg1;
@@ -39,28 +66,28 @@
   align-items: center;
   flex-direction: column;
   text-align: center;
-  gap: .75rem;
-  margin-bottom: 1.875rem;
+  gap: 0.75em;
+  margin-bottom: 1.875em;
   .login-subtitle {
-    font-size: .875rem;
+    font-size: 0.875em;
     font-weight: 400;
     color: $primaryColor;
     margin: 0;
-    @include xxs {
-      font-size: .75rem;
+    @media (max-width: 1440px) {
+      font-size: 0.75em;
     }
   }
   .login-title {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     font-weight: 700;
     color: $textColor;
     line-height: 1.6;
-    @include xxs {
-      font-size: 1.25rem;
+    @media (max-width: 1440px) {
+      font-size: 1.25em;
     }
   }
   .login-desc {
-    font-size: .75rem;
+    font-size: 0.75em;
     font-weight: 400;
     color: $secondaryTextColor;
     margin: 0;
@@ -68,7 +95,7 @@
 }
 
 .form-link {
-  font-size: .875rem;
+  font-size: 0.875em;
   font-weight: 400;
   color: $primaryColor;
   line-height: 1.4;
@@ -82,7 +109,7 @@
 }
 
 .form-terms {
-  font-size: .875rem;
+  font-size: 0.875em;
   font-weight: 400;
   color: $secondaryTextColor;
   margin: 0;
@@ -94,12 +121,12 @@
 }
 
 .auth-link {
-  padding: 1rem 0 0;
+  padding: 1em 0 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: .3125rem;
-  font-size: .875rem;
+  gap: 0.3125em;
+  font-size: 0.875em;
   line-height: 1.4;
   color: $secondaryTextColor;
   a {

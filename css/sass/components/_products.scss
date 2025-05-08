@@ -29,6 +29,9 @@
     font-weight: 400;
     color: $secondaryTitle;
     margin: 0;
+    @include sm {
+      font-size: 0.625rem;
+    }
     @include xs {
       font-size: 0.75rem;
     }
