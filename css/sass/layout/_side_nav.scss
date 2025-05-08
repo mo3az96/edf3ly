@@ -3,16 +3,16 @@
   height: fit-content;
   top: calc(var(--fixed-header) + 1.5625rem);
   @include sm {
-    position: fixed;
-    top: 0;
+    position: fixed !important;
+    top: 0 !important;
     height: 100vh;
-    inset-inline-start: -275px;
-    // inset-inline-start: 0;
+    inset-inline-start: -275px !important;
+    // inset-inline-start: 0 !important;
     width: 270px;
     z-index: 99999;
-    transition: all 0.3s ease-in-out;
+    transition: inset-inline-start 0.3s ease-in-out;
     &.active {
-      inset-inline-start: 0;
+      inset-inline-start: 0 !important;
     }
   }
 }
@@ -79,12 +79,15 @@
     position: relative;
     white-space: nowrap;
     z-index: 2;
+    transition: color 0.3s ease-in-out;
     .icon {
       width: 1.5rem;
       height: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: color 0.3s ease-in-out, fill 0.3s ease-in-out,
+        stroke 0.3s ease-in-out;
     }
     &:focus {
       color: $secondaryNav;

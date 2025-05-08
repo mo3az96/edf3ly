@@ -55,7 +55,7 @@
   font-weight: 500;
   color: $textColor;
   background-color: transparent;
-  transition: all 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
   @include rtl {
     text-align: right;
   }

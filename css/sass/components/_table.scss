@@ -300,7 +300,7 @@ table {
             font-weight: 500;
             color: $textColor;
             border-radius: 0.375rem;
-            transition: all 0.3s ease-in-out;
+            transition: color 0.3s ease-in-out;
 
             &:hover {
               border: none;

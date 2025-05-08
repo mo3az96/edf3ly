@@ -39,7 +39,7 @@
     align-items: center;
     justify-content: center;
     color: #000;
-    transition: all 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
     .dark & {
       color: #fff;
     }
@@ -56,7 +56,7 @@
       inset-inline-start: -1.9375em;
     }
     &:hover {
-      stroke: #ae5be9;
+      color: #ae5be9;
     }
     @include xs {
       display: none;

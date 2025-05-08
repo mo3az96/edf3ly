@@ -25,7 +25,7 @@
   min-height: 2.9375em;
   margin-bottom: 1.4375em;
   width: 100%;
-  transition: all 0.3s ease-in-out;
+  // transition: all 0.3s ease-in-out;
   &:has(.search-form) {
     @include xs {
       grid-template-columns: 1fr;

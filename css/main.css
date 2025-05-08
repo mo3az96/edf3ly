@@ -174,12 +174,6 @@ a:focus {
 }
 
 /* Transition */
-a,
-button,
-input {
-  transition: all 0.3s ease;
-}
-
 /* Images */
 img,
 svg {
@@ -447,7 +441,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 500;
   color: var(--textColor);
   background-color: transparent;
-  transition: all 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
 }
 html[dir=rtl] .form-control {
   text-align: right;
@@ -782,9 +776,6 @@ html[dir=ltr] .form-control {
   justify-content: space-between;
   padding: 1rem;
   margin: 0 0;
-}
-.dark .content-header {
-  background-color: var(--bg1);
 }
 @media (max-width: 767px) {
   .content-header {
@@ -1129,7 +1120,6 @@ html[dir=ltr] .form-control {
   min-height: 2.9375em;
   margin-bottom: 1.4375em;
   width: 100%;
-  transition: all 0.3s ease-in-out;
 }
 @media (max-width: 1920px) {
   .page-header {
@@ -1708,7 +1698,7 @@ html[dir=ltr] .dt-container .bottom .dt-length select {
   font-weight: 500;
   color: var(--textColor);
   border-radius: 0.375rem;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .dt-container .bottom .dt-paging nav button.dt-paging-button:hover {
   border: none;
@@ -1849,7 +1839,7 @@ html[dir=ltr] .dt-container .bottom .dt-length select {
   align-items: center;
   justify-content: center;
   color: #000;
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .dark .products-slider .swiper-btn {
   color: #fff;
@@ -1864,7 +1854,7 @@ html[dir=ltr] .products-slider .swiper-btn i {
   inset-inline-start: -1.9375em;
 }
 .products-slider .swiper-btn:hover {
-  stroke: #ae5be9;
+  color: #ae5be9;
 }
 @media (max-width: 767px) {
   .products-slider .swiper-btn {
@@ -2132,7 +2122,7 @@ header.fixed {
   justify-content: space-between;
   gap: 1.875rem;
   padding: 0.9375rem 0 1rem;
-  transition: all 0.3s ease-in-out;
+  transition: padding 0.3s ease-in-out;
 }
 @media (min-width: 1200px) {
   .header {
@@ -2154,7 +2144,6 @@ header.fixed {
 @media (max-width: 991px) {
   .fixed .header {
     padding: 0.3125rem 0;
-    gap: 0.625rem;
   }
 }
 
@@ -2163,7 +2152,7 @@ header.fixed {
   aspect-ratio: 169/69;
   display: flex;
   align-items: center;
-  transition: all 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 @media (max-width: 991px) {
   .logo {
@@ -2283,12 +2272,11 @@ html[dir=ltr] .header_icon-content {
   padding: 0;
   font-size: 18px;
   color: var(--secondaryTextColor);
-  transition: all 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .menu-button:hover,
 .menu-close:hover {
   color: #ae5be9;
-  opacity: 1;
 }
 @media (max-width: 991px) {
   .menu-button,
@@ -2401,7 +2389,7 @@ html[dir=ltr] .header_icon-content {
 .dashboard-content {
   background-color: var(--bg1);
   padding-top: var(--header);
-  transition: all 0.3s ease-in-out;
+  transition: padding-top 0.3s ease-in-out;
 }
 
 .page_wrapper-content {
@@ -2454,16 +2442,16 @@ html[dir=ltr] .header_icon-content {
 }
 @media (max-width: 991px) {
   .side-nav {
-    position: fixed;
-    top: 0;
+    position: fixed !important;
+    top: 0 !important;
     height: 100vh;
-    inset-inline-start: -275px;
+    inset-inline-start: -275px !important;
     width: 270px;
     z-index: 99999;
-    transition: all 0.3s ease-in-out;
+    transition: inset-inline-start 0.3s ease-in-out;
   }
   .side-nav.active {
-    inset-inline-start: 0;
+    inset-inline-start: 0 !important;
   }
 }
 
@@ -2532,6 +2520,7 @@ html[dir=ltr] .header_icon-content {
   position: relative;
   white-space: nowrap;
   z-index: 2;
+  transition: color 0.3s ease-in-out;
 }
 .nav-list .nav-link .icon {
   width: 1.5rem;
@@ -2539,6 +2528,7 @@ html[dir=ltr] .header_icon-content {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: color 0.3s ease-in-out, fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
 }
 .nav-list .nav-link:focus {
   color: var(--secondaryNav);
