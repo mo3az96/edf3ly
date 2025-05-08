@@ -1,7 +1,23 @@
 .home-cards {
+  @media (max-width: 1920px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 1440px) {
+    font-size: 15px;
+  }
+  @media (max-width: 1200px) {
+    font-size: 12px;
+  }
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+  @media (max-width: 576px) {
+    font-size: 15px;
+  }
   display: flex;
   align-items: end;
-  gap: 0.875rem;
+  gap: 0.875em;
   @include xs {
     flex-direction: column;
     align-items: start;
@@ -10,25 +26,25 @@
 
 .total-card {
   position: relative;
-  padding: 1.875rem 1.25rem;
-  border-radius: 1.25rem;
+  padding: 1.875em 1.25em;
+  border-radius: 1.25em;
   overflow: hidden;
-  width: 18.1875rem;
-  // height: 11.25rem;
+  width: 18.1875em;
+  // height: 11.25em;
   aspect-ratio: 291/180;
-  padding: 1.875rem;
+  padding: 1.875em;
   flex-shrink: 0;
   display: flex;
   align-items: start;
   @include sm {
     align-items: end;
-    padding: 1.25rem;
-    width: 13.5rem;
-    height: 11.5rem;
+    padding: 1.25em;
+    width: 13.5em;
+    height: 11.5em;
   }
   @include xs {
     width: 100%;
-    // max-width: 18.1875rem;
+    // max-width: 18.1875em;
     height: 175px;
     align-items: center;
     margin: 0 auto;
@@ -36,20 +52,20 @@
   &:after,
   &:before {
     content: "";
-    width: 5.875rem;
-    height: 5.875rem;
+    width: 5.875em;
+    height: 5.875em;
     background-color: #fff;
     border-radius: 50%;
     opacity: 0.1;
     position: absolute;
-    bottom: -0.0625rem;
-    inset-inline-end: -2.0625rem;
+    bottom: -0.0625em;
+    inset-inline-end: -2.0625em;
     z-index: 3;
   }
   &:after {
-    width: 5.9375rem;
-    bottom: -3rem;
-    inset-inline-end: 0.4375rem;
+    width: 5.9375em;
+    bottom: -3em;
+    inset-inline-end: 0.4375em;
     z-index: 2;
   }
   .card-bg {
@@ -72,23 +88,23 @@
     }
   }
   .card-title {
-    font-size: 0.875rem;
+    font-size: 0.875em;
     font-weight: 400;
     line-height: 1.2;
-    margin: 0 0 0.75rem;
+    margin: 0 0 0.75em;
     @include xs {
-      font-size: 1rem;
+      font-size: 1em;
       margin-bottom: 12px;
     }
   }
   .card-value {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 1.5rem;
+    gap: 0.5em;
+    font-size: 1.5em;
     font-weight: 700;
     line-height: 1.5;
-    margin: 0 0 1.5625rem;
+    margin: 0 0 1.5625em;
     small {
       font-weight: 600;
       font-size: 83%;
@@ -98,20 +114,20 @@
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 0.8125rem;
+    gap: 0.8125em;
   }
   .extra-tag {
     background-color: #3bb774;
-    height: 1.625rem;
-    padding: 0 0.625rem;
-    border-radius: 0.8125rem;
+    height: 1.625em;
+    padding: 0 0.625em;
+    border-radius: 0.8125em;
     width: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.3125rem;
+    gap: 0.3125em;
     font-family: $secondaryFont;
-    font-size: 0.75rem;
+    font-size: 0.75em;
     font-weight: 500;
     color: #fff;
     fill: #fff;
@@ -119,8 +135,8 @@
   .extra-price {
     display: flex;
     align-items: center;
-    gap: 0.3125rem;
-    font-size: 0.75rem;
+    gap: 0.3125em;
+    font-size: 0.75em;
     font-weight: 500;
     line-height: 1.5;
     small {
@@ -132,7 +148,7 @@
 .statistics-cards {
   display: flex;
   align-items: end;
-  gap: 0.9375rem;
+  gap: 0.9375em;
   width: 100%;
   @include xs {
     display: grid;
@@ -144,43 +160,43 @@
   flex: 1;
   background-color: $bg2;
   color: $secondaryTitle;
-  border-radius: 0.625rem;
-  padding: 1.25rem;
+  border-radius: 0.625em;
+  padding: 1.25em;
   white-space: nowrap;
   .dark & {
     color: #e2e6ee;
   }
   .currency-icon {
-    width: 2.5rem;
+    width: 2.5em;
     aspect-ratio: 1;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 0.9375rem;
+    margin-bottom: 0.9375em;
   }
   .currency-name {
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 0.625rem;
-    font-size: 1rem;
+    gap: 0.625em;
+    font-size: 1em;
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1.2;
-    margin-bottom: 0.625rem;
+    margin-bottom: 0.625em;
     small {
       font-weight: 400;
       font-size: 87.5%;
     }
   }
   .currency-total {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     line-height: 1.5;
     font-weight: 700;
     @include xs {
-      font-size: 1.25rem;
+      font-size: 1.25em;
     }
   }
 }
