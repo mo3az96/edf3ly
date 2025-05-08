@@ -2299,6 +2299,18 @@ html[dir=ltr] .header_icon-content {
   box-shadow: 0rem 0.0625rem 0.125rem 0rem var(--bg2);
 }
 
+.login-page .header {
+  gap: 1.875rem;
+}
+@media (max-width: 991px) {
+  .login-page .header {
+    gap: 0.625rem;
+  }
+}
+.login-page .lang_link-content {
+  margin-inline-start: auto;
+}
+
 .mode-switcher .switch {
   cursor: pointer;
 }

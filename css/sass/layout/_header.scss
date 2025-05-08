@@ -199,3 +199,15 @@ header {
   z-index: 9;
   box-shadow: 0rem 0.0625rem 0.125rem 0rem $bg2;
 }
+
+.login-page {
+  .header {
+    gap: 1.875rem;
+    @include sm {
+      gap: 0.625rem;
+    }
+  }
+  .lang_link-content {
+    margin-inline-start: auto;
+  }
+}
