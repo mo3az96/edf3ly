@@ -222,6 +222,9 @@ table {
         font-weight: 500;
         line-height: 1.5;
         color: $secondaryTextColor;
+        @include xs {
+          font-size: 0.75rem;
+        }
         .dark & {
           color: #626c83;
         }
@@ -237,6 +240,9 @@ table {
         color: $textColor;
         background-image: url('data:image/svg+xml,<svg width="16" height="10" viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.25 1.875L8 8.125L1.75 1.875" stroke="%2340444C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
         background-position: left center;
+        @include xs {
+          font-size: 0.75rem;
+        }
         @include ltr {
           background-position: left center;
         }
@@ -256,6 +262,9 @@ table {
       font-weight: 500;
       line-height: 1.5;
       color: $secondaryTextColor;
+      @include xs {
+        font-size: 0.75rem;
+      }
       .dark & {
         color: #626c83;
       }

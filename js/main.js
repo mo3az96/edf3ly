@@ -25,6 +25,18 @@ $(document).ready(function () {
     }
   });
 
+  // Menu
+  $(".menu-button").click(function () {
+    $(".side-nav").addClass("active");
+    $("body").addClass("overflow");
+    $(".nav-overlay").fadeIn();
+  });
+  $(".menu-close,.nav-overlay").click(function () {
+    $(".side-nav").removeClass("active");
+    $("body").removeClass("overflow");
+    $(".nav-overlay").fadeOut();
+  });
+
   // Fixed Header
   const header = $("#header");
   if (header.length) {

@@ -2,18 +2,17 @@
   position: sticky;
   height: fit-content;
   top: calc(var(--fixed-header) + 1.5625rem);
-  &.mobile-nav {
-    display: none;
-    position: relative;
-    top: unset;
-    width: 100%;
-    height: auto;
-    padding: 0.5rem 1rem 0;
-  }
   @include sm {
-    display: none;
-    &.mobile-nav {
-      display: block;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    inset-inline-start: -275px;
+    // inset-inline-start: 0;
+    width: 270px;
+    z-index: 99999;
+    transition: all 0.3s ease-in-out;
+    &.active {
+      inset-inline-start: 0;
     }
   }
 }
@@ -31,17 +30,12 @@
     height: 0;
   }
   @include sm {
-    padding: 0.625rem;
+    height: 100%;
+    max-height: unset;
     width: 100%;
-    border-radius: 2.1875rem;
-    overflow: hidden;
-    max-height: none;
-    height: auto;
-  }
-  @include xs {
-    max-width: 100%;
-    overflow-x: auto;
-    padding: 0;
+    box-shadow: unset;
+    border-radius: 0;
+    padding: 60px 20px 50px;
   }
 }
 
@@ -49,16 +43,6 @@
   display: flex;
   flex-direction: column;
   gap: 1.875rem;
-  @include sm {
-    flex-direction: row;
-    gap: 0.625rem;
-    justify-content: center;
-  }
-  @include xs {
-    justify-content: start;
-    padding: 0.625rem;
-    width: fit-content;
-  }
   .nav-item {
     position: relative;
     width: 100%;
@@ -79,20 +63,6 @@
       }
       &:first-of-type {
         margin-top: 0.5rem;
-      }
-    }
-    @include sm {
-      padding: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &::after {
-        display: none;
-      }
-      &:has(.active) {
-        &:first-of-type {
-          margin-top: 0;
-        }
       }
     }
   }
@@ -134,31 +104,18 @@
       fill: #ff3b30;
       stroke: #ff3b30;
     }
-    @include sm {
-      width: 2.8125rem;
-      height: 2.8125rem;
-      border-radius: 1.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      &.active {
-        width: auto;
-        padding: 0 1.15rem;
-        background: $primaryGradient;
-        .text {
-          display: block;
-          // @include xxs {
-          //   display: none;
-          // }
-        }
-        // @include xxs {
-        //   width: 2.8125rem;
-        //   padding: 0;
-        // }
-      }
-      .text {
-        display: none;
-      }
-    }
+  }
+}
+
+.nav-overlay {
+  position: fixed;
+  inset: -1px;
+  background-color: #000;
+  opacity: 0.9;
+  z-index: 99998;
+  display: none;
+  // display: block;
+  .dark & {
+    background-color: $bg1;
   }
 }
