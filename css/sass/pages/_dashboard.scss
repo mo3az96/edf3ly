@@ -130,16 +130,18 @@
 .money-input {
   position: relative;
   overflow: hidden;
-
+  .form-control {
+    padding-left: 12.5rem;
+  }
   .currency-select {
     position: absolute;
     inset-block: 0.0625rem;
-    inset-inline-end: 0.0625rem;
+    left: 0.0625rem;
     width: 11.25rem;
     border: none;
-    border-inline-start: 0.0625rem solid var(--border);
-    border-start-end-radius: 0.75rem;
-    border-end-end-radius: 0.75rem;
+    border-right: 0.0625rem solid var(--border);
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
     @include xs {
       width: 5.9375rem;
     }
@@ -149,11 +151,11 @@
     height: auto;
     position: absolute;
     inset-block: 0.0625rem;
-    inset-inline-end: 0.0625rem;
+    left: 0.0625rem;
     border: none;
-    border-inline-start: 0.0625rem solid var(--border);
-    border-start-end-radius: 0.75rem;
-    border-end-end-radius: 0.75rem;
+    border-right: 0.0625rem solid var(--border);
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
     .selection {
       height: 100%;
     }

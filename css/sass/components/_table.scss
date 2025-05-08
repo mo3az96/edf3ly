@@ -244,7 +244,7 @@ table {
           font-size: 0.75rem;
         }
         @include ltr {
-          background-position: left center;
+          background-position: right center;
         }
       }
       @include sm {

@@ -76,6 +76,7 @@
       object-position: top left;
     }
     @include ltr {
+      transform: scaleX(-1);
       object-position: top right;
     }
   }
